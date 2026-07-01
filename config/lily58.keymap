@@ -13,14 +13,39 @@
     combos {
         compatible = "zmk,combos";
 
-        lower {
-            bindings = <&to 1>;
+        ctrl_c {
+            bindings = <&kp LC(C)>;
+            key-positions = <38 39>;
+        };
+
+        ctrl_v {
+            bindings = <&kp LC(V)>;
+            key-positions = <38 40>;
+        };
+
+        base {
+            bindings = <&to 0>;
             key-positions = <52 55>;
         };
 
         raise {
             bindings = <&to 2>;
-            key-positions = <51 56>;
+            key-positions = <52 56>;
+        };
+
+        lower {
+            bindings = <&to 1>;
+            key-positions = <52 57>;
+        };
+
+        calc {
+            bindings = <&to 3>;
+            key-positions = <52 51>;
+        };
+
+        esc {
+            bindings = <&kp ESC>;
+            key-positions = <12 13>;
         };
     };
 
@@ -73,6 +98,145 @@
             #binding-cells = <0>;
             bindings = <&kp P>, <&kp LS(P)>;
         };
+
+        to_base: to_base {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TO_BASE";
+            #binding-cells = <0>;
+            bindings = <&kp ENTER>, <&to 0>;
+        };
+
+        ht_1: ht_1 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_1";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            hold-trigger-key-positions = <1>;
+        };
+
+        ht_2: ht_2 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_2";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <2>;
+        };
+
+        ht_3: ht_3 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_3";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            hold-trigger-key-positions = <3>;
+            flavor = "tap-preferred";
+        };
+
+        ht_4: ht_4 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_4";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <4>;
+        };
+
+        ht_5: ht_5 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_5";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <5>;
+        };
+
+        ht_6: ht_6 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_6";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <6>;
+        };
+
+        ht_7: ht_7 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_7";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <7>;
+        };
+
+        ht_8: ht_8 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_8";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <8>;
+        };
+
+        ht_9: ht_9 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_9";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <9>;
+        };
+
+        ht_0: ht_0 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_0";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <10 42>;
+        };
+
+        ht_plus: ht_plus {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_PLUS";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <17>;
+        };
+
+        ht_slash: ht_slash {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_SLASH";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <29>;
+        };
     };
 
     keymap {
@@ -89,11 +253,11 @@
 
             display-name = "Base";
             bindings = <
-&kp ESC         &kp N1  &kp N2  &kp N3         &kp N4     &kp N5                     &kp N6           &kp N7     &kp N8     &kp N9   &kp N0    &kp GRAVE
-&kp TAB         &td_q   &td_w   &td_e          &td_r      &td_t                      &kp Y            &kp U      &kp I      &td_o    &td_p     &kp MINUS
-&kp LCTRL       &kp A   &kp S   &kp D          &kp F      &kp G                      &kp H            &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LANGUAGE_1  &kp Z   &kp X   &kp C          &kp V      &kp B      &none    &none  &kp N            &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                                &kp BACKSPACE  &kp SPACE  &kp ENTER  &none    &none  &kp RIGHT_SHIFT  &kp SPACE  &kp BSPC
+&kp TILDE       &ht_1 N1 LS(NUMBER_1)  &ht_2 N2 LS(NUMBER_2)  &ht_3 N3 LS(NUMBER_3)  &ht_4 N4 LS(NUMBER_4)  &ht_5 N5 LS(N5)                  &ht_6 N6 LS(NUMBER_6)  &ht_7 N7 LS(N7)  &ht_8 N8 LS(N8)  &ht_9 N9 LS(N9)  &ht_0 N0 LS(N0)  &kp GRAVE
+&kp TAB         &td_q                  &td_w                  &td_e                  &td_r                  &td_t                            &kp Y                  &kp U            &kp I            &td_o            &td_p            &kp MINUS
+&kp LCTRL       &kp A                  &kp S                  &kp D                  &kp F                  &kp G                            &kp H                  &kp J            &kp K            &kp L            &kp SEMI         &kp SQT
+&kp LANGUAGE_1  &kp Z                  &kp X                  &kp C                  &kp V                  &kp B            &none    &none  &kp B                  &kp N            &kp M            &kp COMMA        &kp PERIOD       &kp RIGHT_GUI
+                                                              &kp BACKSPACE          &kp SPACE              &kp ENTER        &none    &none  &kp RIGHT_SHIFT        &kp SPACE        &kp BSPC
             >;
         };
 
@@ -109,9 +273,9 @@
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &out OUT_USB  &out OUT_BLE  &trans           &trans    &trans    &bt BT_CLR_ALL
 &kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                        &kp F7        &kp F8        &kp F9           &kp F10   &kp F11   &kp F12
-&kp GRAVE   &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PRCNT                     &kp CARET     &kp AMPS      &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp TILDE
+&kp F7      &kp F8        &kp F9        &kp F10       &kp F11       &kp F12                       &kp CARET     &kp AMPS      &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp TILDE
 &trans      &trans        &trans        &trans        &trans        &trans        &none    &none  &trans        &kp MINUS     &kp KP_PLUS      &kp LBRC  &kp RBRC  &kp PIPE
-                                        &trans        &trans        &trans        &none    &none  &trans        &trans        &trans
+                                        &trans        &trans        &to_base      &none    &none  &trans        &trans        &trans
             >;
         };
 
@@ -125,18 +289,23 @@
 
             display-name = "Raise";
             bindings = <
-&trans     &trans     &trans     &trans     &trans         &trans                             &trans       &trans     &trans     &trans    &trans     &trans
-&kp GRAVE  &kp N1     &kp N2     &kp N3     &kp N4         &kp N5                             &kp N6       &kp N7     &kp N8     &kp N9    &kp N0     &trans
-&kp F1     &kp LC(A)  &kp LC(S)  &kp LC(D)  &kp LC(T)      &kp P                              &trans       &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &trans
-&kp F7     &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(LS(T))  &kp E              &none    &none  &kp KP_PLUS  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT   &kp BSLH
-                                 &kp LC(Z)  &kp SPACE      &kp LS(LA(SPACE))  &none    &none  &trans       &trans     &trans
+&trans  &trans           &trans          &kp UP_ARROW    &trans           &trans                             &trans       &trans     &trans     &trans    &trans     &trans
+&trans  &kp PRINTSCREEN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp DELETE                         &kp N6       &kp N7     &kp N8     &kp N9    &kp N0     &trans
+&trans  &kp LC(A)        &kp LC(S)       &kp LC(D)       &kp LC(T)        &kp P                              &trans       &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &trans
+&trans  &kp LC(X)        &kp LC(C)       &kp LC(V)       &kp LC(LS(T))    &kp E              &none    &none  &kp KP_PLUS  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT   &kp BSLH
+                                         &kp LC(Z)       &kp SPACE        &kp LS(LA(SPACE))  &none    &none  &trans       &trans     &trans
             >;
         };
 
-        extra_1 { status = "reserved"; };
-
-        extra_2 { status = "reserved"; };
-
-        extra_3 { status = "reserved"; };
+        calc {
+            display-name = "Base";
+            bindings = <
+&none  &none          &none   &none   &none      &none                                  &none  &none  &none  &none  &none  &none
+&none  &none          &kp N1  &kp N2  &kp N3     &ht_plus PLUS MINUS                    &none  &none  &none  &none  &none  &none
+&none  &none          &kp N4  &kp N8  &kp N6     &ht_slash ASTRK SLASH                  &none  &none  &none  &none  &none  &none
+&none  &kp BACKSPACE  &kp N7  &kp N8  &kp N9     &kp DOT                &none    &none  &none  &none  &none  &none  &none  &none
+                              &kp N0  &kp EQUAL  &to_base               &none    &none  &none  &none  &none
+            >;
+        };
     };
 };
