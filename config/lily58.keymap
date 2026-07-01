@@ -237,6 +237,39 @@
             flavor = "tap-preferred";
             hold-trigger-key-positions = <29>;
         };
+
+        ht_dash: ht_dash {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_DASH";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <23>;
+        };
+
+        ht_quo: ht_quo {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_QUO";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <35>;
+        };
+
+        ht_colon: ht_colon {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_COLON";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <34>;
+        };
     };
 
     keymap {
@@ -253,10 +286,10 @@
 
             display-name = "Base";
             bindings = <
-&kp TILDE       &ht_1 N1 LS(NUMBER_1)  &ht_2 N2 LS(NUMBER_2)  &ht_3 N3 LS(NUMBER_3)  &ht_4 N4 LS(NUMBER_4)  &ht_5 N5 LS(N5)                  &ht_6 N6 LS(NUMBER_6)  &ht_7 N7 LS(N7)  &ht_8 N8 LS(N8)  &ht_9 N9 LS(N9)  &ht_0 N0 LS(N0)  &kp GRAVE
-&kp TAB         &td_q                  &td_w                  &td_e                  &td_r                  &td_t                            &kp Y                  &kp U            &kp I            &td_o            &td_p            &kp MINUS
-&kp LCTRL       &kp A                  &kp S                  &kp D                  &kp F                  &kp G                            &kp H                  &kp J            &kp K            &kp L            &kp SEMI         &kp SQT
-&kp LANGUAGE_1  &kp Z                  &kp X                  &kp C                  &kp V                  &kp B            &none    &none  &kp B                  &kp N            &kp M            &kp COMMA        &kp PERIOD       &kp RIGHT_GUI
+&kp TILDE       &ht_1 LS(N1) NUMBER_1  &ht_2 LS(N2) NUMBER_2  &ht_3 LS(N3) NUMBER_3  &ht_4 LS(N4) NUMBER_4  &ht_5 LS(N5) N5                  &ht_6 LS(N6) NUMBER_6  &ht_7 LS(N7) N7  &ht_8 LS(N8) N8  &ht_9 LS(N9) N9  &ht_0 LS(N0) N0               &kp PRINTSCREEN
+&kp TAB         &td_q                  &td_w                  &td_e                  &td_r                  &td_t                            &kp Y                  &kp U            &kp I            &td_o            &td_p                         &ht_dash LS(MINUS) MINUS
+&kp LCTRL       &kp A                  &kp S                  &kp D                  &kp F                  &kp G                            &kp H                  &kp J            &kp K            &kp L            &ht_colon LS(SEMI) SEMICOLON  &ht_quo LS(APOS) APOS
+&kp LANGUAGE_1  &kp Z                  &kp X                  &kp C                  &kp V                  &kp B            &none    &none  &kp B                  &kp N            &kp M            &kp COMMA        &kp PERIOD                    &kp RIGHT_GUI
                                                               &kp BACKSPACE          &kp SPACE              &kp ENTER        &none    &none  &kp RIGHT_SHIFT        &kp SPACE        &kp BSPC
             >;
         };
@@ -298,7 +331,7 @@
         };
 
         calc {
-            display-name = "Base";
+            display-name = "calc";
             bindings = <
 &none  &none          &none   &none   &none      &none                                  &none  &none  &none  &none  &none  &none
 &none  &none          &kp N1  &kp N2  &kp N3     &ht_plus PLUS MINUS                    &none  &none  &none  &none  &none  &none
