@@ -1,0 +1,5 @@
+/ {
+    nice_view_spi: &spi0 {
+        /* This aliases nice_view_spi to the nice_nano's hardware SPI */
+    };
+};
