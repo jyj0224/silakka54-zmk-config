@@ -290,7 +290,7 @@
 &kp TAB         &td_q                  &td_w                  &td_e                  &td_r                  &td_t                            &kp Y                  &kp U            &kp I            &td_o            &td_p                         &ht_dash LS(MINUS) MINUS
 &kp LCTRL       &kp A                  &kp S                  &kp D                  &kp F                  &kp G                            &kp H                  &kp J            &kp K            &kp L            &ht_colon LS(SEMI) SEMICOLON  &ht_quo LS(APOS) APOS
 &kp LANGUAGE_1  &kp Z                  &kp X                  &kp C                  &kp V                  &kp B            &none    &none  &kp B                  &kp N            &kp M            &kp COMMA        &kp PERIOD                    &kp RIGHT_GUI
-                                                              &kp BACKSPACE          &kp SPACE              &kp ENTER        &none    &none  &kp RIGHT_SHIFT        &kp SPACE        &kp BSPC
+                                                              &kp BACKSPACE          &kp SPACE              &kp ENTER        &none    &none  &kp ENTER              &kp SPACE        &kp BSPC
             >;
         };
 
@@ -322,7 +322,7 @@
 
             display-name = "Raise";
             bindings = <
-&trans  &trans           &trans          &kp UP_ARROW    &trans           &trans                             &trans       &trans     &trans     &trans    &trans     &trans
+&trans  &trans           &trans          &kp UP_ARROW    &kp LBKT         &kp RBKT                           &trans       &trans     &trans     &trans    &trans     &trans
 &trans  &kp PRINTSCREEN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp DELETE                         &kp N6       &kp N7     &kp N8     &kp N9    &kp N0     &trans
 &trans  &kp LC(A)        &kp LC(S)       &kp LC(D)       &kp LC(T)        &kp P                              &trans       &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &trans
 &trans  &kp LC(X)        &kp LC(C)       &kp LC(V)       &kp LC(LS(T))    &kp E              &none    &none  &kp KP_PLUS  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT   &kp BSLH
