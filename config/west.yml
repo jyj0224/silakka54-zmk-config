@@ -2,10 +2,15 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: jyj0224
+      url-base: https://github.com/jyj0224
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: v0.3
+      revision: main
       import: app/west.yml
+    - name: nice-view-mod
+      remote: jyj0224
+      revision: jyj0224-patch-sch
   self:
     path: config
