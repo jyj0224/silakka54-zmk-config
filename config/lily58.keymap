@@ -52,6 +52,11 @@
             bindings = <&kp QUESTION>;
             key-positions = <47 48>;
         };
+
+        excel {
+            bindings = <&to 4>;
+            key-positions = <51 55>;
+        };
     };
 
     behaviors {
@@ -346,7 +351,7 @@
 &kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                        &kp F7        &kp F8        &kp F9           &kp F10   &kp F11   &kp F12
 &kp F7      &kp F8        &kp F9        &kp F10       &kp F11       &kp F12                       &kp CARET     &kp AMPS      &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp TILDE
 &trans      &trans        &trans        &trans        &trans        &trans        &none    &none  &trans        &kp MINUS     &kp KP_PLUS      &kp LBRC  &kp RBRC  &kp PIPE
-                                        &trans        &trans        &to_base      &none    &none  &trans        &trans        &trans
+                                        &kp BSPC      &kp SPACE     &to_base      &none    &none  &trans        &trans        &trans
             >;
         };
 
@@ -377,6 +382,35 @@
 &none  &kp BACKSPACE  &kp N7  &kp N8  &kp N9                &kp DOT                &none    &none  &none  &none  &none  &none  &none  &none
                               &kp N0  &kp EQUAL             &to_base               &none    &none  &none  &none  &none
             >;
+        };
+
+        excel {
+            bindings = <
+&kp LC(N1)    &kp LC(N2)  &kp LC(N3)    &kp LC(N4)     &kp LC(N5)  &kp LC(N9)                    &kp N2     &kp N3         &kp N4        &kp N5         &kp N6    &kp N7
+&kp LC(HOME)  &kp LC(P)   &kp LC(PLUS)  &kp LC(MINUS)  &kp LC(F)   &kp LC(H)                     &kp F6     &kp F          &kp LC(PLUS)  &kp LC(MINUS)  &kp P     &kp F12
+&kp LC(END)   &kp LC(A)   &kp LC(S)     &kp LC(D)      &kp LC(V)   &kp LC(Z)                     &kp GRAVE  &kp UP         &kp PAGE_UP   &kp PAGE_DOWN  &kp SEMI  &kp TAB
+&kp LC(TAB)   &kp LC(B)   &kp LC(I)     &kp LC(U)      &kp LC(X)   &kp LC(Y)   &trans    &trans  &kp LEFT   &kp DOWN       &kp RIGHT     &kp SPACE      &kp HOME  &kp DELETE
+                                        &kp LC(SPACE)  &to 5       &to_base    &trans    &trans  &kt LCTRL  &kt RIGHT_ALT  &kp ENTER
+            >;
+        };
+
+        ctrl_shift {
+            bindings = <
+&kp LC(HASH)  &kp LC(LS(AT_SIGN))  &kp LS(LC(SEMICOLON))  &kp LC(LS(PERCENT))    &kp LC(CARET)  &kp LC(TILDE)                             &kp F1            &kp F2            &kp F3             &kp F4         &kp F5    &kp F6
+&kp LC(HOME)  &kp LC(LS(P))        &kp LC(LS(F6))         &kp LC(LS(AMPERSAND))  &kp F          &kp LC(LS(UNDERSCORE))                    &kp F7            &kp F8            &kp F9             &kp F10        &kp F11   &kp F12
+&kp LC(END)   &kp A                &kp S                  &kp D                  &kp V          &kp Z                                     &trans            &kp LC(LS(UP))    &kp PAGE_UP        &kp PAGE_DOWN  &kp SEMI  &kp TAB
+&kp LC(TAB)   &kp B                &kp I                  &kp U                  &kp X          &kp Y                   &trans    &trans  &kp LC(LS(LEFT))  &kp LC(LS(DOWN))  &kp LC(LS(RIGHT))  &kp SPACE      &kp HOME  &kp DELETE
+                                                          &kp LC(SPACE)          &kt LSHFT      &to_base                &trans    &trans  &kt RSHFT         &kt RIGHT_ALT     &kp ENTER
+            >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        ctrl_shift {
+            if-layers = <4>;
+            then-layer = <5>;
         };
     };
 };
