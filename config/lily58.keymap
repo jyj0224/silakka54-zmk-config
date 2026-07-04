@@ -48,14 +48,29 @@
             key-positions = <12 13>;
         };
 
-        question_mark {
-            bindings = <&kp QUESTION>;
-            key-positions = <47 48>;
-        };
-
         excel {
             bindings = <&to 4>;
             key-positions = <51 55>;
+        };
+
+        dst_base {
+            bindings = <&to 0>;
+            key-positions = <24 41>;
+        };
+
+        lang {
+            bindings = <&kp LANG1>;
+            key-positions = <36 37>;
+        };
+
+        gui {
+            bindings = <&kp LEFT_GUI>;
+            key-positions = <49 48>;
+        };
+
+        dst_layer {
+            bindings = <&to 6>;
+            key-positions = <14 25 27>;
         };
     };
 
@@ -313,6 +328,13 @@
             flavor = "tap-preferred";
             hold-trigger-key-positions = <0>;
         };
+
+        td_csh: td_csh {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_CSH";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_SHIFT>, <&kp LC(LEFT_SHIFT)>;
+        };
     };
 
     keymap {
@@ -329,11 +351,11 @@
 
             display-name = "Base";
             bindings = <
-&kp TILDE       &ht_1 LS(N1) NUMBER_1  &ht_2 LS(N2) NUMBER_2  &ht_3 LS(N3) NUMBER_3  &ht_4 LS(N4) NUMBER_4  &ht_5 LS(N5) N5                  &ht_6 LS(N6) NUMBER_6  &ht_7 LS(N7) N7  &ht_8 LS(N8) N8  &ht_9 LS(N9) N9           &ht_0 LS(N0) N0               &kp PRINTSCREEN
-&kp TAB         &td_q                  &td_w                  &td_e                  &td_r                  &td_t                            &kp Y                  &kp U            &kp I            &td_o                     &td_p                         &ht_dash LS(MINUS) MINUS
-&kp LCTRL       &kp A                  &kp S                  &kp D                  &kp F                  &kp G                            &kp H                  &kp J            &kp K            &kp L                     &ht_colon LS(SEMI) SEMICOLON  &ht_quo LS(APOS) APOS
-&kp LANGUAGE_1  &kp Z                  &kp X                  &kp C                  &kp V                  &kp B            &none    &none  &kp B                  &kp N            &kp M            &ht_less RS(COMMA) COMMA  &ht_gr RS(PERIOD) PERIOD      &kp RIGHT_GUI
-                                                              &kp BACKSPACE          &kp SPACE              &kp ENTER        &none    &none  &kp ENTER              &kp SPACE        &kp BSPC
+&kp TILDE   &ht_1 LS(N1) NUMBER_1  &ht_2 LS(N2) NUMBER_2  &ht_3 LS(N3) NUMBER_3  &ht_4 LS(N4) NUMBER_4  &ht_5 LS(N5) N5                  &ht_6 LS(N6) NUMBER_6  &ht_7 LS(N7) N7  &ht_8 LS(N8) N8  &ht_9 LS(N9) N9           &ht_0 LS(N0) N0               &kp PRINTSCREEN
+&kp TAB     &td_q                  &td_w                  &td_e                  &td_r                  &td_t                            &kp Y                  &kp U            &kp I            &td_o                     &td_p                         &ht_dash LS(MINUS) MINUS
+&kp LCTRL   &kp A                  &kp S                  &kp D                  &kp F                  &kp G                            &kp H                  &kp J            &kp K            &kp L                     &ht_colon LS(SEMI) SEMICOLON  &ht_quo LS(APOS) APOS
+&kp LSHIFT  &kp Z                  &kp X                  &kp C                  &kp V                  &kp B            &none    &none  &kp B                  &kp N            &kp M            &ht_less RS(COMMA) COMMA  &ht_gr RS(PERIOD) PERIOD      &kp QUESTION
+                                                          &kp BACKSPACE          &kp SPACE              &kp ENTER        &none    &none  &kp ENTER              &kp SPACE        &kp BSPC
             >;
         };
 
@@ -376,11 +398,11 @@
         calc {
             display-name = "calc";
             bindings = <
-&none  &none          &none   &none   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                  &none  &none  &none  &none  &none  &none
-&none  &none          &kp N1  &kp N2  &kp N3                &ht_plus PLUS MINUS                    &none  &none  &none  &none  &none  &none
-&none  &none          &kp N4  &kp N8  &kp N6                &ht_slash ASTRK SLASH                  &none  &none  &none  &none  &none  &none
-&none  &kp BACKSPACE  &kp N7  &kp N8  &kp N9                &kp DOT                &none    &none  &none  &none  &none  &none  &none  &none
-                              &kp N0  &kp EQUAL             &to_base               &none    &none  &none  &none  &none
+&none  &none          &none   &none      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                  &none  &none  &none  &none  &none  &none
+&none  &none          &kp N1  &kp N2     &kp N3                &ht_plus PLUS MINUS                    &none  &none  &none  &none  &none  &none
+&none  &none          &kp N4  &kp N8     &kp N6                &ht_slash ASTRK SLASH                  &none  &none  &none  &none  &none  &none
+&none  &kp BACKSPACE  &kp N7  &kp N8     &kp N9                &kp DOT                &none    &none  &none  &none  &none  &none  &none  &none
+                              &kp EQUAL  &kp N0                &to_base               &none    &none  &none  &none  &none
             >;
         };
 
@@ -400,7 +422,17 @@
 &kp LC(HOME)  &kp LC(LS(P))        &kp LC(LS(F6))         &kp LC(LS(AMPERSAND))  &kp F          &kp LC(LS(UNDERSCORE))                    &kp F7            &kp F8            &kp F9             &kp F10        &kp F11   &kp F12
 &kp LC(END)   &kp A                &kp S                  &kp D                  &kp V          &kp Z                                     &trans            &kp LC(LS(UP))    &kp PAGE_UP        &kp PAGE_DOWN  &kp SEMI  &kp TAB
 &kp LC(TAB)   &kp B                &kp I                  &kp U                  &kp X          &kp Y                   &trans    &trans  &kp LC(LS(LEFT))  &kp LC(LS(DOWN))  &kp LC(LS(RIGHT))  &kp SPACE      &kp HOME  &kp DELETE
-                                                          &kp LC(SPACE)          &kt LSHFT      &to_base                &trans    &trans  &kt RSHFT         &kt RIGHT_ALT     &kp ENTER
+                                                          &kp LC(SPACE)          &kt LSHFT      &to 4                   &trans    &trans  &kt RSHFT         &kt RIGHT_ALT     &kp ENTER
+            >;
+        };
+
+        dst {
+            bindings = <
+&kp N0     &kp N1  &kp N2  &kp N3     &kp N4     &kp N5                       &trans  &trans  &trans  &trans  &trans  &trans
+&kp TAB    &kp Q   &kp W   &kp E      &kp F      &trans                       &trans  &trans  &trans  &trans  &trans  &trans
+&kp LANG1  &kp A   &kp S   &kp D      &kp LC(F)  &kp M                        &trans  &trans  &trans  &trans  &trans  &trans
+&kp C      &trans  &trans  &trans     &trans     &kp Y      &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                           &kp LCTRL  &td_csh    &kp SPACE  &trans    &trans  &trans  &trans  &trans
             >;
         };
     };
