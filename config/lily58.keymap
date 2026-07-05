@@ -33,17 +33,17 @@
         };
 
         raise {
-            bindings = <&to 2>;
+            bindings = <&to 4>;
             key-positions = <52 56>;
         };
 
         lower {
-            bindings = <&to 1>;
+            bindings = <&to 3>;
             key-positions = <52 57>;
         };
 
         calc {
-            bindings = <&to 3>;
+            bindings = <&to 5>;
             key-positions = <52 51>;
         };
 
@@ -54,12 +54,12 @@
         };
 
         excel {
-            bindings = <&to 4>;
+            bindings = <&to 6>;
             key-positions = <51 55>;
         };
 
         lang {
-            bindings = <&kp LANG1>;
+            bindings = <&kor_layer>;
             key-positions = <28 27>;
             layers = <0>;
         };
@@ -71,7 +71,7 @@
         };
 
         dst_layer {
-            bindings = <&tog 6>;
+            bindings = <&tog 8>;
             key-positions = <14 25 27>;
         };
 
@@ -88,33 +88,38 @@
         };
 
         egg1 {
-            bindings = <&to 8>;
+            bindings = <&to 10>;
             key-positions = <25 26 15 28 20 21>;
             layers = <0>;
         };
 
         egg2 {
-            bindings = <&to 9>;
+            bindings = <&to 11>;
             key-positions = <40 44 46>;
-            layers = <8>;
+            layers = <10>;
         };
 
         egg3 {
             bindings = <&egg3>;
             key-positions = <28 33>;
-            layers = <9>;
+            layers = <11>;
         };
 
         egg4 {
             bindings = <&egg4>;
             key-positions = <18>;
-            layers = <10>;
+            layers = <12>;
         };
 
         egg_final {
-            bindings = <&to 7>;
+            bindings = <&to 9>;
             key-positions = <1 13 25 37 10 22 34 48>;
-            layers = <11>;
+            layers = <13>;
+        };
+
+        arrow {
+            bindings = <&tog 2>;
+            key-positions = <28 27 26>;
         };
     };
 
@@ -197,14 +202,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "EGG3";
             #binding-cells = <0>;
-            bindings = <&none>, <&to 10>;
+            bindings = <&none>, <&to 12>;
         };
 
         egg4: egg4 {
             compatible = "zmk,behavior-tap-dance";
             label = "EGG4";
             #binding-cells = <0>;
-            bindings = <&none>, <&none>, <&none>, <&none>, <&ht_layer 11 0>;
+            bindings = <&none>, <&none>, <&none>, <&none>, <&ht_layer 13 0>;
         };
 
         ht_layer: ht_layer {
@@ -219,10 +224,19 @@
         };
     };
 
+    macros {
+        kor_layer: eng_kor {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANG1 &tog 1>;
+            label = "ENG_KOR";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        ENG {
             // ------------------------------------------------------------------------------------------------------------
             // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
             // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
@@ -231,14 +245,37 @@
             //                     | GUI  | LOWER| SPACE|  n/a   |  |  n/a  | ENTER| RAISE | BSPC  |
             // Note: Silakka54 has 54 keys - the 4 positions marked n/a are not present (inner thumb + encoder positions)
 
-            display-name = "Base";
+            display-name = "Eng";
+            bindings = <
+&kp TILDE          &hold_tap LS(N1) NUMBER_1  &hold_tap LS(N2) NUMBER_2  &hold_tap LS(N3) NUMBER_3  &hold_tap LS(N4) NUMBER_4  &hold_tap LS(N5) N5                  &hold_tap LS(N6) NUMBER_6  &hold_tap LS(N7) N7  &hold_tap LS(N8) N8        &hold_tap LS(N9) N9          &hold_tap LS(N0) N0           &kp PRINTSCREEN
+&hold_tap LS(Q) Q  &hold_tap LS(W) W          &hold_tap LS(E) E          &hold_tap LS(R) R          &hold_tap LS(T) T          &hold_tap LS(Y) Y                    &hold_tap RS(U) U          &hold_tap RS(I) I    &hold_tap RS(O) O          &hold_tap RS(P) P            &kp TAB                       &hold_tap LS(MINUS) MINUS
+&kp LCTRL          &hold_tap LS(A) A          &hold_tap LS(S) S          &hold_tap LS(D) D          &hold_tap LS(F) F          &hold_tap LS(G) G                    &hold_tap RS(H) H          &hold_tap RS(J) J    &hold_tap RS(K) K          &hold_tap RS(L) L            &hold_tap LS(SEMI) SEMICOLON  &hold_tap LS(APOS) APOS
+&kp LSHIFT         &hold_tap LS(Z) Z          &hold_tap LS(X) X          &hold_tap LS(C) C          &hold_tap LS(V) V          &hold_tap LS(B) B    &none    &none  &hold_tap RS(N) N          &hold_tap RS(M) M    &hold_tap RS(COMMA) COMMA  &hold_tap RS(PERIOD) PERIOD  &kp EXCL                      &kp QUESTION
+                                                                         &kp ENTER                  &kp SPACE                  &kp BSPC             &none    &none  &kp BSPC                   &kp SPACE            &kp ENTER
+            >;
+        };
+
+        KOR {
+            display-name = "Kor";
             bindings = <
 &kp TILDE   &hold_tap LS(N1) NUMBER_1  &hold_tap LS(N2) NUMBER_2  &hold_tap LS(N3) NUMBER_3  &hold_tap LS(N4) NUMBER_4  &hold_tap LS(N5) N5                  &hold_tap LS(N6) NUMBER_6  &hold_tap LS(N7) N7  &hold_tap LS(N8) N8  &hold_tap LS(N9) N9        &hold_tap LS(N0) N0           &kp PRINTSCREEN
 &kp TAB     &td_q                      &td_w                      &td_e                      &td_r                      &td_t                                &kp Y                      &kp U                &kp I                &td_o                      &td_p                         &hold_tap LS(MINUS) MINUS
 &kp LCTRL   &kp A                      &kp S                      &kp D                      &kp F                      &kp G                                &kp H                      &kp J                &kp K                &kp L                      &hold_tap LS(SEMI) SEMICOLON  &hold_tap LS(APOS) APOS
-&kp LSHIFT  &kp Z                      &kp X                      &kp C                      &kp V                      &kp B                &none    &none  &kp B                      &kp N                &kp M                &hold_tap RS(COMMA) COMMA  &hold_tap RS(PERIOD) PERIOD   &kp QUESTION
+&kp LSHIFT  &kp LS(N1)                 &kp Z                      &kp X                      &kp C                      &kp V                &none    &none  &kp B                      &kp N                &kp M                &hold_tap RS(COMMA) COMMA  &hold_tap RS(PERIOD) PERIOD   &kp QUESTION
                                                                   &kp ENTER                  &kp SPACE                  &kp BSPC             &none    &none  &kp BSPC                   &kp SPACE            &kp ENTER
             >;
+        };
+
+        arrow {
+            bindings = <
+&trans  &trans  &trans          &trans          &trans           &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans          &kp UP_ARROW    &trans           &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans          &trans          &trans           &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans          &trans           &trans  &trans    &trans  &trans  &trans  &trans
+            >;
+
+            label = "arrow";
         };
 
         lower_layer {
@@ -294,7 +331,7 @@
 &kp LC(HOME)  &kp LC(P)   &kp LC(PLUS)  &kp LC(MINUS)  &kp LC(F)   &kp LC(H)                     &kp F6     &kp F          &kp LC(PLUS)  &kp LC(MINUS)  &kp P     &kp F12
 &kp LC(END)   &kp LC(A)   &kp LC(S)     &kp LC(D)      &kp LC(V)   &kp LC(Z)                     &kp GRAVE  &kp UP         &kp PAGE_UP   &kp PAGE_DOWN  &kp SEMI  &kp TAB
 &kp LC(TAB)   &kp LC(B)   &kp LC(I)     &kp LC(U)      &kp LC(X)   &kp LC(Y)   &trans    &trans  &kp LEFT   &kp DOWN       &kp RIGHT     &kp SPACE      &kp HOME  &kp DELETE
-                                        &kp LC(SPACE)  &to 5       &to_base    &trans    &trans  &kt LCTRL  &kt RIGHT_ALT  &kp ENTER
+                                        &kp LC(SPACE)  &to 7       &to_base    &trans    &trans  &kt LCTRL  &kt RIGHT_ALT  &kp ENTER
             >;
 
             label = "excel";
@@ -306,7 +343,7 @@
 &kp LC(HOME)  &kp LC(LS(P))        &kp LC(LS(F6))         &kp LC(LS(AMPERSAND))  &kp F          &kp LC(LS(UNDERSCORE))                    &kp F7            &kp F8            &kp F9             &kp F10        &kp F11   &kp F12
 &kp LC(END)   &kp A                &kp S                  &kp D                  &kp V          &kp Z                                     &trans            &kp LC(LS(UP))    &kp PAGE_UP        &kp PAGE_DOWN  &kp SEMI  &kp TAB
 &kp LC(TAB)   &kp B                &kp I                  &kp U                  &kp X          &kp Y                   &trans    &trans  &kp LC(LS(LEFT))  &kp LC(LS(DOWN))  &kp LC(LS(RIGHT))  &kp SPACE      &kp HOME  &kp DELETE
-                                                          &kp LC(SPACE)          &kt LSHFT      &to 4                   &trans    &trans  &kt RSHFT         &kt RIGHT_ALT     &kp ENTER
+                                                          &kp LC(SPACE)          &kt LSHFT      &to 6                   &trans    &trans  &kt RSHFT         &kt RIGHT_ALT     &kp ENTER
             >;
 
             label = "excel_2";
