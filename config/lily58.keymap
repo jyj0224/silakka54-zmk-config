@@ -61,7 +61,7 @@
         lang {
             bindings = <&kor_layer>;
             key-positions = <28 27>;
-            layers = <0>;
+            layers = <0 1>;
         };
 
         gui {
