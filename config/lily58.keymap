@@ -60,7 +60,7 @@
 
         lang {
             bindings = <&kp LANG1>;
-            key-positions = <36 37>;
+            key-positions = <28 27>;
             layers = <0>;
         };
 
@@ -182,7 +182,7 @@
 &kp TAB     &td_q                      &td_w                      &td_e                      &td_r                      &td_t                                &kp Y                      &kp U                &kp I                &td_o                      &td_p                         &hold_tap LS(MINUS) MINUS
 &kp LCTRL   &kp A                      &kp S                      &kp D                      &kp F                      &kp G                                &kp H                      &kp J                &kp K                &kp L                      &hold_tap LS(SEMI) SEMICOLON  &hold_tap LS(APOS) APOS
 &kp LSHIFT  &kp Z                      &kp X                      &kp C                      &kp V                      &kp B                &none    &none  &kp B                      &kp N                &kp M                &hold_tap RS(COMMA) COMMA  &hold_tap RS(PERIOD) PERIOD   &kp QUESTION
-                                                                  &kp BACKSPACE              &kp SPACE                  &kp ENTER            &none    &none  &kp ENTER                  &kp SPACE            &kp BSPC
+                                                                  &kp ENTER                  &kp SPACE                  &kp BSPC             &none    &none  &kp BSPC                   &kp SPACE            &kp ENTER
             >;
         };
 
