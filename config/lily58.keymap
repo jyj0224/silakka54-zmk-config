@@ -88,33 +88,33 @@
         };
 
         egg1 {
-            bindings = <&to 1>;
+            bindings = <&to 8>;
             key-positions = <25 26 15 28 20 21>;
             layers = <0>;
         };
 
         egg2 {
-            bindings = <&to 3>;
+            bindings = <&to 9>;
             key-positions = <40 44 46>;
-            layers = <1>;
+            layers = <8>;
         };
 
         egg3 {
             bindings = <&egg3>;
             key-positions = <28 33>;
-            layers = <3>;
+            layers = <9>;
         };
 
         egg4 {
             bindings = <&egg4>;
             key-positions = <18>;
-            layers = <2>;
+            layers = <10>;
         };
 
         egg_final {
             bindings = <&to 7>;
             key-positions = <1 13 25 37 10 22 34 48>;
-            layers = <5>;
+            layers = <11>;
         };
     };
 
@@ -197,14 +197,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "EGG3";
             #binding-cells = <0>;
-            bindings = <&none>, <&to 2>;
+            bindings = <&none>, <&to 10>;
         };
 
         egg4: egg4 {
             compatible = "zmk,behavior-tap-dance";
             label = "EGG4";
             #binding-cells = <0>;
-            bindings = <&none>, <&none>, <&none>, <&none>, <&ht_layer 5 0>;
+            bindings = <&none>, <&none>, <&none>, <&none>, <&ht_layer 11 0>;
         };
 
         ht_layer: ht_layer {
@@ -324,7 +324,7 @@
             label = "DST";
         };
 
-        egg {
+        welcome {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
@@ -333,7 +333,55 @@
                         &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
 
-            label = "welcome_:)";
+            label = ":)";
+        };
+
+        egg1 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+            >;
+
+            label = "1";
+        };
+
+        egg2 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+            >;
+
+            label = "2";
+        };
+
+        egg3 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+            >;
+
+            label = "3";
+        };
+
+        egg4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+            >;
+
+            label = "4";
         };
     };
 
