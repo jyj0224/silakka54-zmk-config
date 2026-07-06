@@ -247,32 +247,32 @@
 
             display-name = "Eng";
             bindings = <
-&kp TILDE          &hold_tap LS(N1) NUMBER_1  &hold_tap LS(N2) NUMBER_2  &hold_tap LS(N3) NUMBER_3  &hold_tap LS(N4) NUMBER_4  &hold_tap LS(N5) N5                  &hold_tap LS(N6) NUMBER_6  &hold_tap LS(N7) N7  &hold_tap LS(N8) N8        &hold_tap LS(N9) N9          &hold_tap LS(N0) N0           &kp PRINTSCREEN
-&hold_tap LS(Q) Q  &hold_tap LS(W) W          &hold_tap LS(E) E          &hold_tap LS(R) R          &hold_tap LS(T) T          &hold_tap LS(Y) Y                    &hold_tap RS(U) U          &hold_tap RS(I) I    &hold_tap RS(O) O          &hold_tap RS(P) P            &kp TAB                       &hold_tap LS(MINUS) MINUS
-&kp LCTRL          &hold_tap LS(A) A          &hold_tap LS(S) S          &hold_tap LS(D) D          &hold_tap LS(F) F          &hold_tap LS(G) G                    &hold_tap RS(H) H          &hold_tap RS(J) J    &hold_tap RS(K) K          &hold_tap RS(L) L            &hold_tap LS(SEMI) SEMICOLON  &hold_tap LS(APOS) APOS
-&kp LSHIFT         &hold_tap LS(Z) Z          &hold_tap LS(X) X          &hold_tap LS(C) C          &hold_tap LS(V) V          &hold_tap LS(B) B    &none    &none  &hold_tap RS(N) N          &hold_tap RS(M) M    &hold_tap RS(COMMA) COMMA  &hold_tap RS(PERIOD) PERIOD  &kp EXCL                      &kp QUESTION
-                                                                         &kp ENTER                  &kp SPACE                  &kp BSPC             &none    &none  &kp BSPC                   &kp SPACE            &kp ENTER
+&kp TILDE   &hold_tap LS(N1) NUMBER_1  &hold_tap LS(N2) NUMBER_2  &hold_tap LS(N3) NUMBER_3  &hold_tap LS(N4) NUMBER_4  &hold_tap LS(N5) N5                  &hold_tap LS(N6) NUMBER_6  &hold_tap LS(N7) N7  &hold_tap LS(N8) N8        &hold_tap LS(N9) N9          &hold_tap LS(N0) N0      &kp PRINTSCREEN
+&kp TAB     &hold_tap LS(Q) Q          &hold_tap LS(W) W          &hold_tap LS(E) E          &hold_tap LS(R) R          &hold_tap LS(T) T                    &hold_tap RS(Y) Y          &hold_tap RS(U) U    &hold_tap RS(I) I          &hold_tap RS(O) O            &hold_tap RS(P) P        &hold_tap LS(MINUS) MINUS
+&kp LCTRL   &hold_tap LS(A) A          &hold_tap LS(S) S          &hold_tap LS(D) D          &hold_tap LS(F) F          &hold_tap LS(G) G                    &hold_tap RS(H) H          &hold_tap RS(J) J    &hold_tap RS(K) K          &hold_tap RS(L) L            &hold_tap LS(APOS) APOS  &hold_tap LS(SEMI) SEMI
+&kp LSHIFT  &hold_tap LS(Z) Z          &hold_tap LS(X) X          &hold_tap LS(C) C          &hold_tap LS(V) V          &hold_tap LS(B) B    &none    &none  &hold_tap RS(N) N          &hold_tap RS(M) M    &hold_tap RS(COMMA) COMMA  &hold_tap RS(PERIOD) PERIOD  &kp EXCL                 &kp QUESTION
+                                                                  &kp ENTER                  &kp SPACE                  &kp BSPC             &none    &none  &kp BSPC                   &kp SPACE            &kp ENTER
             >;
         };
 
         KOR {
             display-name = "Kor";
             bindings = <
-&kp TILDE   &hold_tap LS(N1) NUMBER_1  &hold_tap LS(N2) NUMBER_2  &hold_tap LS(N3) NUMBER_3  &hold_tap LS(N4) NUMBER_4  &hold_tap LS(N5) N5                  &hold_tap LS(N6) NUMBER_6  &hold_tap LS(N7) N7  &hold_tap LS(N8) N8  &hold_tap LS(N9) N9        &hold_tap LS(N0) N0           &kp PRINTSCREEN
-&kp TAB     &td_q                      &td_w                      &td_e                      &td_r                      &td_t                                &kp Y                      &kp U                &kp I                &td_o                      &td_p                         &hold_tap LS(MINUS) MINUS
-&kp LCTRL   &kp A                      &kp S                      &kp D                      &kp F                      &kp G                                &kp H                      &kp J                &kp K                &kp L                      &hold_tap LS(SEMI) SEMICOLON  &hold_tap LS(APOS) APOS
-&kp LSHIFT  &kp LS(N1)                 &kp Z                      &kp X                      &kp C                      &kp V                &none    &none  &kp B                      &kp N                &kp M                &hold_tap RS(COMMA) COMMA  &hold_tap RS(PERIOD) PERIOD   &kp QUESTION
+&kp TILDE   &hold_tap LS(N1) NUMBER_1  &hold_tap LS(N2) NUMBER_2  &hold_tap LS(N3) NUMBER_3  &hold_tap LS(N4) NUMBER_4  &hold_tap LS(N5) N5                  &hold_tap LS(N6) NUMBER_6  &hold_tap LS(N7) N7  &hold_tap LS(N8) N8  &hold_tap LS(N9) N9        &hold_tap LS(N0) N0          &kp PRINTSCREEN
+&kp TAB     &td_q                      &td_w                      &td_e                      &td_r                      &td_t                                &kp Y                      &kp U                &kp I                &td_o                      &td_p                        &hold_tap LS(MINUS) MINUS
+&kp LCTRL   &kp A                      &kp S                      &kp D                      &kp F                      &kp G                                &kp H                      &kp J                &kp K                &kp L                      &hold_tap LS(APOS) APOS      &hold_tap LS(SEMICOLON) SEMICOLON
+&kp LSHIFT  &kp LS(N1)                 &kp Z                      &kp X                      &kp C                      &kp V                &none    &none  &kp B                      &kp N                &kp M                &hold_tap RS(COMMA) COMMA  &hold_tap RS(PERIOD) PERIOD  &kp QUESTION
                                                                   &kp ENTER                  &kp SPACE                  &kp BSPC             &none    &none  &kp BSPC                   &kp SPACE            &kp ENTER
             >;
         };
 
         arrow {
             bindings = <
-&trans  &trans  &trans          &trans          &trans           &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans          &kp UP_ARROW    &trans           &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans          &trans          &trans           &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                &trans          &trans           &trans  &trans    &trans  &trans  &trans  &trans
+&kp LANGUAGE_1  &trans  &trans          &trans          &trans           &trans                       &trans     &trans          &trans          &trans           &trans  &trans
+&trans          &trans  &trans          &kp UP_ARROW    &trans           &trans                       &trans     &trans          &kp UP_ARROW    &trans           &trans  &trans
+&trans          &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans                       &trans     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&trans          &trans  &kp Z           &kp C           &trans           &trans     &trans    &trans  &trans     &trans          &trans          &trans           &trans  &trans
+                                        &trans          &kp SPACE        &kp ENTER  &trans    &trans  &kp SPACE  &kp SPACE       &trans
             >;
 
             label = "arrow";
