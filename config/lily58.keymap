@@ -256,7 +256,7 @@
 &kp TAB     &hold_tap LS(Q) Q          &hold_tap LS(W) W          &hold_tap LS(E) E          &hold_tap LS(R) R          &td_y                                &hold_tap RS(Y) Y          &hold_tap RS(U) U    &hold_tap RS(I) I    &hold_tap RS(O) O          &hold_tap RS(P) P            &hold_tap LS(MINUS) MINUS
 &kp LCTRL   &hold_tap LS(A) A          &hold_tap LS(S) S          &hold_tap LS(D) D          &hold_tap LS(F) F          &hold_tap LS(G) G                    &hold_tap RS(H) H          &hold_tap RS(J) J    &hold_tap RS(K) K    &hold_tap RS(L) L          &hold_tap LS(APOS) APOS      &hold_tap LS(SEMI) SEMI
 &kp LSHIFT  &kp LANG1                  &hold_tap LS(Z) Z          &hold_tap LS(X) X          &hold_tap LS(C) C          &hold_tap LS(V) V    &none    &none  &hold_tap ENTER COMMA      &hold_tap RS(N) N    &hold_tap RS(M) M    &hold_tap RS(COMMA) COMMA  &hold_tap RS(PERIOD) PERIOD  &kp QUESTION
-                                                                  &kp BSPC                   &kp ENTER                  &kp B                &none    &none  &kp BSPC                   &kp SPACE            &kp ENTER
+                                                                  &kp BSPC                   &kp ENTER                  &hold_tap LS(B) B    &none    &none  &kp BSPC                   &kp SPACE            &kp ENTER
             >;
         };
 
