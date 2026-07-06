@@ -15,15 +15,13 @@
 
         ctrl_c {
             bindings = <&kp LC(C)>;
-            key-positions = <38 39>;
-            layers = <0>;
+            key-positions = <40 39>;
             timeout-ms = <50>;
         };
 
         ctrl_v {
             bindings = <&kp LC(V)>;
-            key-positions = <38 40>;
-            layers = <0>;
+            key-positions = <39 41>;
             timeout-ms = <50>;
         };
 
@@ -50,7 +48,7 @@
         esc {
             bindings = <&kp ESC>;
             key-positions = <12 13>;
-            layers = <0>;
+            layers = <0 1>;
         };
 
         excel {
@@ -67,7 +65,7 @@
         gui {
             bindings = <&kp LEFT_GUI>;
             key-positions = <11 10>;
-            layers = <0>;
+            layers = <0 1>;
         };
 
         dst_layer {
@@ -78,19 +76,19 @@
         caps_lock {
             bindings = <&kp CAPS>;
             key-positions = <0 1>;
-            layers = <0>;
+            layers = <0 1>;
         };
 
         exclaim {
             bindings = <&kp RS(NUMBER_1)>;
             key-positions = <49 48>;
-            layers = <0>;
+            layers = <0 1>;
         };
 
         egg1 {
             bindings = <&to 10>;
             key-positions = <25 26 15 28 20 21>;
-            layers = <0>;
+            layers = <0 1>;
         };
 
         egg2 {
@@ -222,6 +220,13 @@
             flavor = "tap-preferred";
             hold-trigger-key-positions = <0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57>;
         };
+
+        td_y: td_y {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_Y";
+            #binding-cells = <0>;
+            bindings = <&hold_tap LS(T) T>, <&hold_tap RS(Y) Y>;
+        };
     };
 
     macros {
@@ -247,11 +252,11 @@
 
             display-name = "Eng";
             bindings = <
-&kp TILDE   &hold_tap LS(N1) NUMBER_1  &hold_tap LS(N2) NUMBER_2  &hold_tap LS(N3) NUMBER_3  &hold_tap LS(N4) NUMBER_4  &hold_tap LS(N5) N5                  &hold_tap LS(N6) NUMBER_6  &hold_tap LS(N7) N7  &hold_tap LS(N8) N8        &hold_tap LS(N9) N9          &hold_tap LS(N0) N0      &kp PRINTSCREEN
-&kp TAB     &hold_tap LS(Q) Q          &hold_tap LS(W) W          &hold_tap LS(E) E          &hold_tap LS(R) R          &hold_tap LS(T) T                    &hold_tap RS(Y) Y          &hold_tap RS(U) U    &hold_tap RS(I) I          &hold_tap RS(O) O            &hold_tap RS(P) P        &hold_tap LS(MINUS) MINUS
-&kp LCTRL   &hold_tap LS(A) A          &hold_tap LS(S) S          &hold_tap LS(D) D          &hold_tap LS(F) F          &hold_tap LS(G) G                    &hold_tap RS(H) H          &hold_tap RS(J) J    &hold_tap RS(K) K          &hold_tap RS(L) L            &hold_tap LS(APOS) APOS  &hold_tap LS(SEMI) SEMI
-&kp LSHIFT  &hold_tap LS(Z) Z          &hold_tap LS(X) X          &hold_tap LS(C) C          &hold_tap LS(V) V          &hold_tap LS(B) B    &none    &none  &hold_tap RS(N) N          &hold_tap RS(M) M    &hold_tap RS(COMMA) COMMA  &hold_tap RS(PERIOD) PERIOD  &kp EXCL                 &kp QUESTION
-                                                                  &kp ENTER                  &kp SPACE                  &kp BSPC             &none    &none  &kp BSPC                   &kp SPACE            &kp ENTER
+&kp TILDE   &hold_tap LS(N1) NUMBER_1  &hold_tap LS(N2) NUMBER_2  &hold_tap LS(N3) NUMBER_3  &hold_tap LS(N4) NUMBER_4  &hold_tap LS(N5) N5                  &hold_tap LS(N6) NUMBER_6  &hold_tap LS(N7) N7  &hold_tap LS(N8) N8  &hold_tap LS(N9) N9        &hold_tap LS(N0) N0          &kp PRINTSCREEN
+&kp TAB     &hold_tap LS(Q) Q          &hold_tap LS(W) W          &hold_tap LS(E) E          &hold_tap LS(R) R          &td_y                                &hold_tap RS(Y) Y          &hold_tap RS(U) U    &hold_tap RS(I) I    &hold_tap RS(O) O          &hold_tap RS(P) P            &hold_tap LS(MINUS) MINUS
+&kp LCTRL   &hold_tap LS(A) A          &hold_tap LS(S) S          &hold_tap LS(D) D          &hold_tap LS(F) F          &hold_tap LS(G) G                    &hold_tap RS(H) H          &hold_tap RS(J) J    &hold_tap RS(K) K    &hold_tap RS(L) L          &hold_tap LS(APOS) APOS      &hold_tap LS(SEMI) SEMI
+&kp LSHIFT  &kp LANG1                  &hold_tap LS(Z) Z          &hold_tap LS(X) X          &hold_tap LS(C) C          &hold_tap LS(V) V    &none    &none  &hold_tap ENTER COMMA      &hold_tap RS(N) N    &hold_tap RS(M) M    &hold_tap RS(COMMA) COMMA  &hold_tap RS(PERIOD) PERIOD  &kp QUESTION
+                                                                  &kp BSPC                   &kp ENTER                  &kp B                &none    &none  &kp BSPC                   &kp SPACE            &kp ENTER
             >;
         };
 
