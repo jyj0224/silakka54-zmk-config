@@ -129,7 +129,7 @@
 
         ctrl_layer {
             bindings = <&kp LS(LCTRL)>;
-            key-positions = <26 27 28>;
+            key-positions = <27 28>;
             layers = <2>;
         };
 
