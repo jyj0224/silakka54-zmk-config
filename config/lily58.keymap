@@ -26,17 +26,17 @@
         };
 
         base {
-            bindings = <&to 0>;
+            bindings = <&to 1>;
             key-positions = <52 55>;
         };
 
         raise {
-            bindings = <&to 4>;
+            bindings = <&to 2>;
             key-positions = <52 56>;
         };
 
         lower {
-            bindings = <&to 3>;
+            bindings = <&to 4>;
             key-positions = <52 57>;
         };
 
@@ -48,7 +48,7 @@
         esc {
             bindings = <&kp ESC>;
             key-positions = <12 13>;
-            layers = <0 1>;
+            layers = <1 0>;
         };
 
         excel {
@@ -59,13 +59,13 @@
         lang {
             bindings = <&kor_layer>;
             key-positions = <28 27>;
-            layers = <0 1>;
+            layers = <1 0>;
         };
 
         gui {
             bindings = <&kp LEFT_GUI>;
             key-positions = <11 10>;
-            layers = <0 1>;
+            layers = <1 0>;
         };
 
         dst_layer {
@@ -76,19 +76,19 @@
         caps_lock {
             bindings = <&kp CAPS>;
             key-positions = <0 1>;
-            layers = <0 1>;
+            layers = <1 0>;
         };
 
         exclaim {
             bindings = <&kp RS(NUMBER_1)>;
             key-positions = <49 48>;
-            layers = <0 1>;
+            layers = <1 0>;
         };
 
         egg1 {
             bindings = <&to 10>;
             key-positions = <25 26 15 28 20 21>;
-            layers = <0 1>;
+            layers = <1 0>;
         };
 
         egg2 {
@@ -116,8 +116,20 @@
         };
 
         arrow {
-            bindings = <&tog 2>;
+            bindings = <&tog 3>;
             key-positions = <28 27 26>;
+        };
+
+        ctrl_del {
+            bindings = <&kp LC(DELETE)>;
+            key-positions = <39 38>;
+            layers = <2>;
+        };
+
+        ctrl_layer {
+            bindings = <&kp LS(LCTRL)>;
+            key-positions = <39 40 38>;
+            layers = <2>;
         };
     };
 
@@ -175,7 +187,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TO_BASE";
             #binding-cells = <0>;
-            bindings = <&kp ENTER>, <&to 0>;
+            bindings = <&kp ENTER>, <&to 1>;
         };
 
         hold_tap: hold_tap {
@@ -233,13 +245,24 @@
         kor_layer: eng_kor {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANG1 &tog 1>;
+            bindings = <&kp LANG1 &tog 0>;
             label = "ENG_KOR";
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
+
+        KOR {
+            display-name = "Kor";
+            bindings = <
+&kp TILDE   &hold_tap LS(N1) NUMBER_1  &hold_tap LS(N2) NUMBER_2  &hold_tap LS(N3) NUMBER_3  &hold_tap LS(N4) NUMBER_4  &hold_tap LS(N5) N5                  &hold_tap LS(N6) NUMBER_6  &hold_tap LS(N7) N7  &hold_tap LS(N8) N8  &hold_tap LS(N9) N9        &hold_tap LS(N0) N0          &kp PRINTSCREEN
+&kp TAB     &td_q                      &td_w                      &td_e                      &td_r                      &td_t                                &kp Y                      &kp U                &kp I                &td_o                      &td_p                        &hold_tap LS(MINUS) MINUS
+&kp LCTRL   &kp A                      &kp S                      &kp D                      &kp F                      &kp G                                &kp H                      &kp J                &kp K                &kp L                      &hold_tap LS(APOS) APOS      &hold_tap LS(SEMICOLON) SEMICOLON
+&kp LSHIFT  &kp LS(N1)                 &kp Z                      &kp X                      &kp C                      &kp V                &none    &none  &kp B                      &kp N                &kp M                &hold_tap RS(COMMA) COMMA  &hold_tap RS(PERIOD) PERIOD  &kp QUESTION
+                                                                  &kp BSPC                   &kp ENTER                  &kp LGUI             &none    &none  &kp BSPC                   &kp SPACE            &kp ENTER
+            >;
+        };
 
         ENG {
             // ------------------------------------------------------------------------------------------------------------
@@ -252,22 +275,29 @@
 
             display-name = "Eng";
             bindings = <
-&kp TILDE   &hold_tap LS(N1) NUMBER_1  &hold_tap LS(N2) NUMBER_2  &hold_tap LS(N3) NUMBER_3  &hold_tap LS(N4) NUMBER_4  &hold_tap LS(N5) N5                  &hold_tap LS(N6) NUMBER_6  &hold_tap LS(N7) N7  &hold_tap LS(N8) N8  &hold_tap LS(N9) N9        &hold_tap LS(N0) N0          &kp PRINTSCREEN
-&kp TAB     &hold_tap LS(Q) Q          &hold_tap LS(W) W          &hold_tap LS(E) E          &hold_tap LS(R) R          &td_y                                &hold_tap RS(Y) Y          &hold_tap RS(U) U    &hold_tap RS(I) I    &hold_tap RS(O) O          &hold_tap RS(P) P            &hold_tap LS(MINUS) MINUS
-&kp LCTRL   &hold_tap LS(A) A          &hold_tap LS(S) S          &hold_tap LS(D) D          &hold_tap LS(F) F          &hold_tap LS(G) G                    &hold_tap RS(H) H          &hold_tap RS(J) J    &hold_tap RS(K) K    &hold_tap RS(L) L          &hold_tap LS(APOS) APOS      &hold_tap LS(SEMI) SEMI
-&kp LSHIFT  &kp LANG1                  &hold_tap LS(Z) Z          &hold_tap LS(X) X          &hold_tap LS(C) C          &hold_tap LS(V) V    &none    &none  &hold_tap ENTER COMMA      &hold_tap RS(N) N    &hold_tap RS(M) M    &hold_tap RS(COMMA) COMMA  &hold_tap RS(PERIOD) PERIOD  &kp QUESTION
-                                                                  &kp BSPC                   &kp ENTER                  &hold_tap LS(B) B    &none    &none  &kp BSPC                   &kp SPACE            &kp ENTER
+&hold_tap CAPSLOCK TILDE  &hold_tap LS(N1) NUMBER_1  &hold_tap LS(N2) NUMBER_2  &hold_tap LS(N3) NUMBER_3  &hold_tap LS(N4) NUMBER_4  &hold_tap LS(N5) N5                  &hold_tap LS(N6) NUMBER_6  &hold_tap LS(N7) N7  &hold_tap LS(N8) N8  &hold_tap LS(N9) N9        &hold_tap LS(N0) N0          &kp PRINTSCREEN
+&kp TAB                   &hold_tap LS(Q) Q          &hold_tap LS(W) W          &hold_tap LS(E) E          &hold_tap LS(R) R          &td_y                                &hold_tap RS(Y) Y          &hold_tap RS(U) U    &hold_tap RS(I) I    &hold_tap RS(O) O          &hold_tap RS(P) P            &hold_tap LS(MINUS) MINUS
+&kp LCTRL                 &hold_tap LS(A) A          &hold_tap LS(S) S          &hold_tap LS(D) D          &hold_tap LS(F) F          &hold_tap LS(G) G                    &hold_tap RS(H) H          &hold_tap RS(J) J    &hold_tap RS(K) K    &hold_tap RS(L) L          &hold_tap LS(APOS) APOS      &hold_tap LS(SEMI) SEMI
+&kp LSHIFT                &kp LANG1                  &hold_tap LS(Z) Z          &hold_tap LS(X) X          &hold_tap LS(C) C          &hold_tap LS(V) V    &none    &none  &hold_tap ENTER COMMA      &hold_tap RS(N) N    &hold_tap RS(M) M    &hold_tap RS(COMMA) COMMA  &hold_tap RS(PERIOD) PERIOD  &kp QUESTION
+                                                                                &kp BSPC                   &kp ENTER                  &hold_tap LS(B) B    &none    &none  &kp BSPC                   &kp SPACE            &kp ENTER
             >;
         };
 
-        KOR {
-            display-name = "Kor";
+        raise_layer {
+            // ------------------------------------------------------------------------------------------------------------
+            // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
+            // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
+            // |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |                   |      |   <-  |   v   |  ^   |  ->   |       |
+            // |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |  n/a   |  |  n/a  |  +   |   -   |   =   |  [   |   ]   |   \   |
+            //                     |      |      |      |  n/a   |  |  n/a  |      |       |       |
+
+            display-name = "Raise";
             bindings = <
-&kp TILDE   &hold_tap LS(N1) NUMBER_1  &hold_tap LS(N2) NUMBER_2  &hold_tap LS(N3) NUMBER_3  &hold_tap LS(N4) NUMBER_4  &hold_tap LS(N5) N5                  &hold_tap LS(N6) NUMBER_6  &hold_tap LS(N7) N7  &hold_tap LS(N8) N8  &hold_tap LS(N9) N9        &hold_tap LS(N0) N0          &kp PRINTSCREEN
-&kp TAB     &td_q                      &td_w                      &td_e                      &td_r                      &td_t                                &kp Y                      &kp U                &kp I                &td_o                      &td_p                        &hold_tap LS(MINUS) MINUS
-&kp LCTRL   &kp A                      &kp S                      &kp D                      &kp F                      &kp G                                &kp H                      &kp J                &kp K                &kp L                      &hold_tap LS(APOS) APOS      &hold_tap LS(SEMICOLON) SEMICOLON
-&kp LSHIFT  &kp LS(N1)                 &kp Z                      &kp X                      &kp C                      &kp V                &none    &none  &kp B                      &kp N                &kp M                &hold_tap RS(COMMA) COMMA  &hold_tap RS(PERIOD) PERIOD  &kp QUESTION
-                                                                  &kp ENTER                  &kp SPACE                  &kp BSPC             &none    &none  &kp BSPC                   &kp SPACE            &kp ENTER
+&trans      &trans           &trans          &kp UP_ARROW    &kp LBKT         &kp RBKT                           &trans       &trans     &trans     &trans    &trans     &trans
+&trans      &kp PRINTSCREEN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp C                              &kp N6       &kp N7     &kp N8     &kp N9    &kp N0     &trans
+&kp DELETE  &kp LC(A)        &kp LC(S)       &kp LC(D)       &kp LC(T)        &kp P                              &trans       &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &trans
+&kp LSHFT   &kp LC(C)        &kp LC(V)       &kp LCTRL       &kp LC(LS(T))    &kp E              &none    &none  &kp KP_PLUS  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT   &kp BSLH
+                                             &kp LC(Z)       &kp SPACE        &kp LS(LA(SPACE))  &none    &none  &trans       &trans     &trans
             >;
         };
 
@@ -298,24 +328,6 @@
 &kp F7      &kp F8        &kp F9        &kp F10       &kp F11       &kp F12                       &kp CARET     &kp AMPS      &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp TILDE
 &trans      &trans        &trans        &trans        &trans        &trans        &none    &none  &trans        &kp MINUS     &kp KP_PLUS      &kp LBRC  &kp RBRC  &kp PIPE
                                         &kp BSPC      &kp SPACE     &to_base      &none    &none  &trans        &trans        &trans
-            >;
-        };
-
-        raise_layer {
-            // ------------------------------------------------------------------------------------------------------------
-            // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-            // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
-            // |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |                   |      |   <-  |   v   |  ^   |  ->   |       |
-            // |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |  n/a   |  |  n/a  |  +   |   -   |   =   |  [   |   ]   |   \   |
-            //                     |      |      |      |  n/a   |  |  n/a  |      |       |       |
-
-            display-name = "Raise";
-            bindings = <
-&trans     &trans           &trans          &kp UP_ARROW    &kp LBKT         &kp RBKT                           &trans       &trans     &trans     &trans    &trans     &trans
-&kp DEL    &kp PRINTSCREEN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp C                              &kp N6       &kp N7     &kp N8     &kp N9    &kp N0     &trans
-&kp LCTRL  &kp LC(A)        &kp LC(S)       &kp LC(D)       &kp LC(T)        &kp P                              &trans       &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &trans
-&kp LSHFT  &kp LC(X)        &kp LC(C)       &kp LC(V)       &kp LC(LS(T))    &kp E              &none    &none  &kp KP_PLUS  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT   &kp BSLH
-                                            &kp LC(Z)       &kp SPACE        &kp LS(LA(SPACE))  &none    &none  &trans       &trans     &trans
             >;
         };
 
