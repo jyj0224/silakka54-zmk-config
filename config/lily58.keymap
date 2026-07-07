@@ -374,10 +374,10 @@
 
         arrow {
             bindings = <
-&kp LANGUAGE_1  &trans  &trans          &trans          &trans           &trans                       &trans     &trans     &trans  &trans        &trans  &trans
-&trans          &trans  &trans          &kp UP_ARROW    &trans           &trans                       &trans     &trans     &trans  &trans        &trans  &trans
-&trans          &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans                       &trans     &kp C      &kp Z   &kp UP_ARROW  &trans  &trans
-&trans          &trans  &trans          &trans          &trans           &trans     &trans    &trans  &trans     &trans     &trans  &trans        &trans  &trans
+&kp LANGUAGE_1  &trans  &trans          &trans          &trans           &trans                       &trans     &trans     &trans        &trans  &trans  &trans
+&trans          &trans  &trans          &kp UP_ARROW    &trans           &trans                       &trans     &trans     &trans        &trans  &trans  &trans
+&trans          &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans                       &trans     &kp Z      &kp UP_ARROW  &kp C   &trans  &trans
+&trans          &trans  &trans          &trans          &trans           &trans     &trans    &trans  &trans     &trans     &trans        &trans  &trans  &trans
                                         &trans          &kp ENTER        &kp SPACE  &trans    &trans  &kp SPACE  &kp SPACE  &trans
             >;
 
