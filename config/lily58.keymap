@@ -15,13 +15,13 @@
 
         ctrl_c {
             bindings = <&kp LC(C)>;
-            key-positions = <40 39>;
+            key-positions = <39 38>;
             timeout-ms = <50>;
         };
 
         ctrl_v {
             bindings = <&kp LC(V)>;
-            key-positions = <39 41>;
+            key-positions = <38 40>;
             timeout-ms = <50>;
         };
 
@@ -117,7 +117,7 @@
 
         arrow {
             bindings = <&tog 3>;
-            key-positions = <28 27 26>;
+            key-positions = <28 26 27>;
             layers = <0 1 3 6 7 5>;
         };
 
@@ -158,6 +158,14 @@
             key-positions = <29 32 33>;
             layers = <0>;
             timeout-ms = <100>;
+        };
+
+        frankenstein {
+            bindings = <&frankenstein>;
+            key-positions = <29 28 27 30 31 32>;
+            layers = <9>;
+            timeout-ms = <100>;
+            slow-release;
         };
     };
 
@@ -303,6 +311,13 @@
             #binding-cells = <0>;
             bindings = <&kp G &kp K &kp Q &kp S &kp L &kp E &kp K>;
             label = "KOR_HB";
+        };
+
+        frankenstein: frankenstein {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp D &kp N &kp L &kp E &kp O &kp G &kp K &kp S &kp SPACE &kp T &kp O &kp D &kp A &kp U &kp D &kp C &kp K &kp D &kp W &kp H &kp D &kp M &kp L &kp SPACE &kp D &kp U &kp R &kp T &kp K &kp R &kp K &kp SPACE &kp T &kp L &kp W &kp K &kp R &kp E &kp H &kp L &kp S &kp E &kp K>;
+            label = "FRANKENSTEIN";
         };
     };
 
