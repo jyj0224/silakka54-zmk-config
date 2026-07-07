@@ -364,11 +364,11 @@
 
             display-name = "Raise";
             bindings = <
-&trans      &trans           &trans          &kp UP_ARROW    &kp LBKT         &kp RBKT                           &trans       &trans     &trans     &trans    &trans     &trans
-&trans      &kp PRINTSCREEN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp C                              &kp N6       &kp N7     &kp N8     &kp N9    &kp N0     &trans
-&kp DELETE  &kp LC(A)        &kp LC(S)       &kp LCTRL       &kp LC(T)        &kp P                              &trans       &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &trans
-&kp LSHFT   &kp LC(C)        &kp LC(V)       &kp LC(D)       &kp LC(LS(T))    &kp E              &none    &none  &kp KP_PLUS  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT   &kp BSLH
-                                             &kp LC(Z)       &kp SPACE        &kp LS(LA(SPACE))  &none    &none  &trans       &trans     &trans
+&trans     &trans           &trans          &kp UP_ARROW    &kp LBKT         &kp RBKT                           &trans       &trans     &trans     &trans    &trans     &trans
+&trans     &kp PRINTSCREEN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp C                              &kp N6       &kp N7     &kp N8     &kp N9    &kp N0     &trans
+&kp LC(A)  &kp LC(S)        &kp DELETE      &kp LCTRL       &kp LC(T)        &kp P                              &trans       &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &trans
+&kp LSHFT  &kp LC(C)        &kp LC(V)       &kp LC(D)       &kp LC(LS(T))    &kp E              &none    &none  &kp KP_PLUS  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT   &kp BSLH
+                                            &kp LC(Z)       &kp SPACE        &kp LS(LA(SPACE))  &none    &none  &trans       &trans     &trans
             >;
         };
 
