@@ -118,6 +118,7 @@
         arrow {
             bindings = <&tog 3>;
             key-positions = <28 27 26>;
+            layers = <0 1 3 6 7 5>;
         };
 
         ctrl_del {
@@ -142,18 +143,21 @@
             bindings = <&kor_sb>;
             key-positions = <17 32 33>;
             layers = <0>;
+            timeout-ms = <100>;
         };
 
         kor_ib {
             bindings = <&kor_ib>;
             key-positions = <27 32 33>;
             layers = <0>;
+            timeout-ms = <100>;
         };
 
         kor_hb {
             bindings = <&kor_hb>;
             key-positions = <29 32 33>;
             layers = <0>;
+            timeout-ms = <100>;
         };
     };
 
