@@ -132,7 +132,7 @@
             layers = <2>;
         };
 
-        the {
+        th {
             bindings = <&the>;
             key-positions = <17 30>;
             layers = <1>;
@@ -264,7 +264,7 @@
         the: the {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp T &kp H &kp E>;
+            bindings = <&kp T &kp H>;
             label = "THE";
         };
 
