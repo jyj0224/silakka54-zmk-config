@@ -245,7 +245,7 @@
         kor_layer: eng_kor {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANG1 &tog 0>;
+            bindings = <&kp LANG1 &tog 1>;
             label = "ENG_KOR";
         };
     };
