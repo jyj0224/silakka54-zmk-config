@@ -122,13 +122,13 @@
 
         ctrl_del {
             bindings = <&kp LC(DELETE)>;
-            key-positions = <39 38>;
+            key-positions = <27 26>;
             layers = <2>;
         };
 
         ctrl_layer {
             bindings = <&kp LS(LCTRL)>;
-            key-positions = <39 40 38>;
+            key-positions = <26 27 28>;
             layers = <2>;
         };
 
@@ -140,7 +140,19 @@
 
         kor_sb {
             bindings = <&kor_sb>;
-            key-positions = <17 46 13>;
+            key-positions = <17 32 33>;
+            layers = <0>;
+        };
+
+        kor_ib {
+            bindings = <&kor_ib>;
+            key-positions = <27 32 33>;
+            layers = <0>;
+        };
+
+        kor_hb {
+            bindings = <&kor_hb>;
+            key-positions = <29 32 33>;
             layers = <0>;
         };
     };
@@ -274,6 +286,20 @@
             bindings = <&kp T &kp M &kp Q &kp S &kp L &kp E &kp K>;
             label = "KOR_SB";
         };
+
+        kor_ib: kor_ind {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp D &kp L &kp Q &kp S &kp L &kp E &kp K>;
+            label = "KOR_IND";
+        };
+
+        kor_hb: kor_hb {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp G &kp K &kp Q &kp S &kp L &kp E &kp K>;
+            label = "KOR_HB";
+        };
     };
 
     keymap {
@@ -321,19 +347,19 @@
             bindings = <
 &trans      &trans           &trans          &kp UP_ARROW    &kp LBKT         &kp RBKT                           &trans       &trans     &trans     &trans    &trans     &trans
 &trans      &kp PRINTSCREEN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp C                              &kp N6       &kp N7     &kp N8     &kp N9    &kp N0     &trans
-&kp DELETE  &kp LC(A)        &kp LC(S)       &kp LC(D)       &kp LC(T)        &kp P                              &trans       &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &trans
-&kp LSHFT   &kp LC(C)        &kp LC(V)       &kp LCTRL       &kp LC(LS(T))    &kp E              &none    &none  &kp KP_PLUS  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT   &kp BSLH
+&kp DELETE  &kp LC(A)        &kp LC(S)       &kp LCTRL       &kp LC(T)        &kp P                              &trans       &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &trans
+&kp LSHFT   &kp LC(C)        &kp LC(V)       &kp LC(D)       &kp LC(LS(T))    &kp E              &none    &none  &kp KP_PLUS  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT   &kp BSLH
                                              &kp LC(Z)       &kp SPACE        &kp LS(LA(SPACE))  &none    &none  &trans       &trans     &trans
             >;
         };
 
         arrow {
             bindings = <
-&kp LANGUAGE_1  &trans  &trans          &trans          &trans           &trans                       &trans     &trans          &trans          &trans           &trans  &trans
-&trans          &trans  &kp Z           &kp UP_ARROW    &kp C            &trans                       &trans     &trans          &kp UP_ARROW    &trans           &trans  &trans
-&trans          &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans                       &trans     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
-&trans          &trans  &trans          &trans          &trans           &trans     &trans    &trans  &trans     &trans          &trans          &trans           &trans  &trans
-                                        &trans          &kp ENTER        &kp SPACE  &trans    &trans  &kp SPACE  &kp SPACE       &trans
+&kp LANGUAGE_1  &trans  &trans          &trans          &trans           &trans                       &trans     &trans     &trans  &trans        &trans  &trans
+&trans          &trans  &trans          &kp UP_ARROW    &trans           &trans                       &trans     &trans     &trans  &trans        &trans  &trans
+&trans          &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans                       &trans     &kp C      &kp Z   &kp UP_ARROW  &trans  &trans
+&trans          &trans  &trans          &trans          &trans           &trans     &trans    &trans  &trans     &trans     &trans  &trans        &trans  &trans
+                                        &trans          &kp ENTER        &kp SPACE  &trans    &trans  &kp SPACE  &kp SPACE  &trans
             >;
 
             label = "arrow";
