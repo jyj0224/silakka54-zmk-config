@@ -131,6 +131,18 @@
             key-positions = <39 40 38>;
             layers = <2>;
         };
+
+        the {
+            bindings = <&the>;
+            key-positions = <17 30>;
+            layers = <1>;
+        };
+
+        kor_sb {
+            bindings = <&kor_sb>;
+            key-positions = <17 46 13>;
+            layers = <0>;
+        };
     };
 
     behaviors {
@@ -247,6 +259,20 @@
             #binding-cells = <0>;
             bindings = <&kp LANG1 &tog 1>;
             label = "ENG_KOR";
+        };
+
+        the: the {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp T &kp H &kp E>;
+            label = "THE";
+        };
+
+        kor_sb: kor_sb {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp T &kp M &kp Q &kp S &kp L &kp E &kp K>;
+            label = "KOR_SB";
         };
     };
 
