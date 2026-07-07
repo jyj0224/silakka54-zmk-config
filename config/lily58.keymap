@@ -333,7 +333,7 @@
 &trans          &trans  &trans          &kp UP_ARROW    &trans           &trans                       &trans     &trans          &kp UP_ARROW    &trans           &trans  &trans
 &trans          &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans                       &trans     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
 &trans          &trans  &kp Z           &kp C           &trans           &trans     &trans    &trans  &trans     &trans          &trans          &trans           &trans  &trans
-                                        &trans          &kp SPACE        &kp ENTER  &trans    &trans  &kp SPACE  &kp SPACE       &trans
+                                        &trans          &kp ENTER        &kp SPACE  &trans    &trans  &kp SPACE  &kp SPACE       &trans
             >;
 
             label = "arrow";
