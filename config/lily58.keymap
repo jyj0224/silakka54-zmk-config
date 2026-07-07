@@ -15,13 +15,13 @@
 
         ctrl_c {
             bindings = <&kp LC(C)>;
-            key-positions = <39 38>;
+            key-positions = <39 40>;
             timeout-ms = <50>;
         };
 
         ctrl_v {
             bindings = <&kp LC(V)>;
-            key-positions = <38 40>;
+            key-positions = <39 41>;
             timeout-ms = <50>;
         };
 
