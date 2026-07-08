@@ -73,8 +73,8 @@
             key-positions = <14 25 27>;
         };
 
-        caps_lock {
-            bindings = <&kp CAPS>;
+        delete {
+            bindings = <&kp DELETE>;
             key-positions = <0 1>;
             layers = <1 0>;
         };
@@ -166,6 +166,12 @@
             layers = <9>;
             timeout-ms = <100>;
             slow-release;
+        };
+
+        kor_not_only {
+            bindings = <&kor_not_only>;
+            key-positions = <27 32>;
+            layers = <0>;
         };
     };
 
@@ -275,6 +281,13 @@
             #binding-cells = <0>;
             bindings = <&hold_tap LS(T) T>, <&hold_tap RS(Y) Y>;
         };
+
+        td_excl: td_excl {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_EXCL";
+            #binding-cells = <0>;
+            bindings = <&kp QUESTION>, <&kp EXCL>;
+        };
     };
 
     macros {
@@ -319,6 +332,13 @@
             bindings = <&kp D &kp N &kp L &kp E &kp O &kp G &kp K &kp S &kp SPACE &kp T &kp O &kp D &kp A &kp U &kp D &kp C &kp K &kp D &kp W &kp H &kp D &kp M &kp L &kp SPACE &kp D &kp U &kp R &kp T &kp K &kp R &kp K &kp SPACE &kp T &kp L &kp W &kp K &kp R &kp E &kp H &kp L &kp S &kp E &kp K>;
             label = "FRANKENSTEIN";
         };
+
+        kor_not_only: kor_not_only {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(Q) &kp N &kp F &kp SPACE &kp D &kp K &kp S &kp L &kp F &kp K>;
+            label = "KOR_NOT_ONLY";
+        };
     };
 
     keymap {
@@ -328,10 +348,10 @@
             display-name = "Kor";
             bindings = <
 &kp TILDE   &hold_tap LS(N1) NUMBER_1  &hold_tap LS(N2) NUMBER_2  &hold_tap LS(N3) NUMBER_3  &hold_tap LS(N4) NUMBER_4  &hold_tap LS(N5) N5                  &hold_tap LS(N6) NUMBER_6  &hold_tap LS(N7) N7  &hold_tap LS(N8) N8  &hold_tap LS(N9) N9        &hold_tap LS(N0) N0          &kp PRINTSCREEN
-&kp TAB     &td_q                      &td_w                      &td_e                      &td_r                      &td_t                                &kp Y                      &kp U                &kp I                &td_o                      &td_p                        &hold_tap LS(MINUS) MINUS
+&kp TAB     &hold_tap LS(Q) Q          &hold_tap LS(W) W          &hold_tap LS(E) E          &hold_tap LS(R) R          &hold_tap LS(T) T                    &kp Y                      &kp U                &kp I                &hold_tap LS(O) O          &hold_tap LS(P) P            &hold_tap LS(MINUS) MINUS
 &kp LCTRL   &kp A                      &kp S                      &kp D                      &kp F                      &kp G                                &kp H                      &kp J                &kp K                &kp L                      &hold_tap LS(APOS) APOS      &hold_tap LS(SEMICOLON) SEMICOLON
-&kp LSHIFT  &kp LS(N1)                 &kp Z                      &kp X                      &kp C                      &kp V                &none    &none  &kp B                      &kp N                &kp M                &hold_tap RS(COMMA) COMMA  &hold_tap RS(PERIOD) PERIOD  &kp QUESTION
-                                                                  &kp BSPC                   &kp ENTER                  &kp LGUI             &none    &none  &kp BSPC                   &kp SPACE            &kp ENTER
+&kp LSHIFT  &kp LS(N1)                 &kp Z                      &kp X                      &kp C                      &kp V                &none    &none  &kp B                      &kp N                &kp M                &hold_tap RS(COMMA) COMMA  &hold_tap RS(PERIOD) PERIOD  &td_excl
+                                                                  &kp DEL                    &kp ENTER                  &kp LGUI             &none    &none  &kp BSPC                   &kp SPACE            &kp ENTER
             >;
         };
 
@@ -349,8 +369,8 @@
 &hold_tap CAPSLOCK TILDE  &hold_tap LS(N1) NUMBER_1  &hold_tap LS(N2) NUMBER_2  &hold_tap LS(N3) NUMBER_3  &hold_tap LS(N4) NUMBER_4  &hold_tap LS(N5) N5                  &hold_tap LS(N6) NUMBER_6  &hold_tap LS(N7) N7  &hold_tap LS(N8) N8  &hold_tap LS(N9) N9        &hold_tap LS(N0) N0          &kp PRINTSCREEN
 &kp TAB                   &hold_tap LS(Q) Q          &hold_tap LS(W) W          &hold_tap LS(E) E          &hold_tap LS(R) R          &td_y                                &hold_tap RS(Y) Y          &hold_tap RS(U) U    &hold_tap RS(I) I    &hold_tap RS(O) O          &hold_tap RS(P) P            &hold_tap LS(MINUS) MINUS
 &kp LCTRL                 &hold_tap LS(A) A          &hold_tap LS(S) S          &hold_tap LS(D) D          &hold_tap LS(F) F          &hold_tap LS(G) G                    &hold_tap RS(H) H          &hold_tap RS(J) J    &hold_tap RS(K) K    &hold_tap RS(L) L          &hold_tap LS(APOS) APOS      &hold_tap LS(SEMI) SEMI
-&kp LSHIFT                &kp LANG1                  &hold_tap LS(Z) Z          &hold_tap LS(X) X          &hold_tap LS(C) C          &hold_tap LS(V) V    &none    &none  &hold_tap ENTER COMMA      &hold_tap RS(N) N    &hold_tap RS(M) M    &hold_tap RS(COMMA) COMMA  &hold_tap RS(PERIOD) PERIOD  &kp QUESTION
-                                                                                &kp BSPC                   &kp ENTER                  &hold_tap LS(B) B    &none    &none  &kp BSPC                   &kp SPACE            &kp ENTER
+&kp LSHIFT                &kp LANG1                  &hold_tap LS(Z) Z          &hold_tap LS(X) X          &hold_tap LS(C) C          &hold_tap LS(V) V    &none    &none  &hold_tap ENTER COMMA      &hold_tap RS(N) N    &hold_tap RS(M) M    &hold_tap RS(COMMA) COMMA  &hold_tap RS(PERIOD) PERIOD  &td_excl
+                                                                                &kp DEL                    &kp ENTER                  &hold_tap LS(B) B    &none    &none  &kp BSPC                   &kp SPACE            &kp ENTER
             >;
         };
 
