@@ -173,6 +173,18 @@
             key-positions = <27 32>;
             layers = <0>;
         };
+
+        kor_thx {
+            bindings = <&kor_thx>;
+            key-positions = <16 32 25>;
+            layers = <0>;
+        };
+
+        kor_hi {
+            bindings = <&kor_hi>;
+            key-positions = <26 27 32>;
+            layers = <0>;
+        };
     };
 
     behaviors {
@@ -315,21 +327,21 @@
         kor_sb: kor_sb {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp T &kp M &kp Q &kp S &kp L &kp E &kp K>;
+            bindings = <&kp T &kp M &kp Q &kp S &kp L &kp E &kp K &kp DOT>;
             label = "KOR_SB";
         };
 
         kor_ib: kor_ind {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp D &kp L &kp Q &kp S &kp L &kp E &kp K>;
+            bindings = <&kp D &kp L &kp Q &kp S &kp L &kp E &kp K &kp DOT>;
             label = "KOR_IND";
         };
 
         kor_hb: kor_hb {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp G &kp K &kp Q &kp S &kp L &kp E &kp K>;
+            bindings = <&kp G &kp K &kp Q &kp S &kp L &kp E &kp K &kp DOT>;
             label = "KOR_HB";
         };
 
@@ -343,8 +355,22 @@
         kor_not_only: kor_not_only {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LS(Q) &kp N &kp S &kp SPACE &kp D &kp K &kp S &kp L &kp F &kp K>;
+            bindings = <&kp LS(Q) &kp N &kp S &kp SPACE &kp D &kp K &kp S &kp L &kp F &kp K>;
             label = "KOR_NOT_ONLY";
+        };
+
+        kor_thx: kor_thx {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp R &kp K &kp A &kp T &kp K &kp G &kp K &kp Q &kp S &kp L &kp E &kp K>;
+            label = "KOR_THX";
+        };
+
+        kor_hi: kor_hi {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp D &kp K &kp S &kp S &kp U &kp D &kp G &kp K &kp T &kp P &kp D &kp Y>;
+            label = "KOR_HI";
         };
     };
 
