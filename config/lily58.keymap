@@ -288,6 +288,13 @@
             #binding-cells = <0>;
             bindings = <&kp QUESTION>, <&kp EXCL>;
         };
+
+        td_lang: td_lang {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_LANG";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_1>, <&kp LANG2>;
+        };
     };
 
     macros {
@@ -336,7 +343,7 @@
         kor_not_only: kor_not_only {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LS(Q) &kp N &kp F &kp SPACE &kp D &kp K &kp S &kp L &kp F &kp K>;
+            bindings = <&none &kp LS(Q) &kp N &kp S &kp SPACE &kp D &kp K &kp S &kp L &kp F &kp K>;
             label = "KOR_NOT_ONLY";
         };
     };
@@ -394,11 +401,11 @@
 
         arrow {
             bindings = <
-&kp LANGUAGE_1  &trans  &trans          &trans          &trans           &trans                       &trans     &trans     &trans        &trans  &trans  &trans
-&trans          &trans  &trans          &kp UP_ARROW    &trans           &trans                       &trans     &trans     &trans        &trans  &trans  &trans
-&trans          &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans                       &trans     &kp Z      &kp UP_ARROW  &kp C   &trans  &trans
-&trans          &trans  &trans          &trans          &trans           &trans     &trans    &trans  &trans     &trans     &trans        &trans  &trans  &trans
-                                        &trans          &kp ENTER        &kp SPACE  &trans    &trans  &kp SPACE  &kp SPACE  &trans
+&trans  &trans  &trans          &trans          &trans           &trans                       &trans     &trans     &trans        &trans  &trans  &trans
+&trans  &trans  &trans          &kp UP_ARROW    &td_lang         &trans                       &trans     &trans     &trans        &trans  &trans  &trans
+&trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans                       &trans     &kp Z      &kp UP_ARROW  &kp C   &trans  &trans
+&trans  &trans  &trans          &trans          &trans           &trans     &trans    &trans  &trans     &trans     &trans        &trans  &trans  &trans
+                                &trans          &kp ENTER        &kp SPACE  &trans    &trans  &kp SPACE  &kp SPACE  &trans
             >;
 
             label = "arrow";
