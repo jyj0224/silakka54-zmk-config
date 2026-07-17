@@ -321,7 +321,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_BACKSPACE";
             #binding-cells = <0>;
-            bindings = <&hold_tap LC(BACKSPACE) BACKSPACE>, <&kp LC(Y)>;
+            bindings = <&kp BACKSPACE>, <&kp LC(BACKSPACE)>;
         };
     };
 
