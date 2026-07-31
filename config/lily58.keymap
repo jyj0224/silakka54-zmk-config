@@ -36,7 +36,7 @@
         };
 
         lower {
-            bindings = <&to 4>;
+            bindings = <&to 5>;
             key-positions = <52 57>;
         };
 
@@ -193,6 +193,41 @@
         underline {
             bindings = <&kp LC(U)>;
             key-positions = <52 16>;
+        };
+
+        clipboard {
+            bindings = <&kp LG(V)>;
+            key-positions = <40 41>;
+            layers = <14>;
+        };
+
+        ctrl {
+            bindings = <&sl 14>;
+            key-positions = <26 27>;
+            layers = <0 1>;
+        };
+
+        window {
+            bindings = <&sl 15>;
+            key-positions = <27 28>;
+            layers = <0 1>;
+        };
+
+        extra {
+            bindings = <&sl 16>;
+            key-positions = <26 28>;
+            layers = <0 1>;
+        };
+
+        clipstdio {
+            bindings = <&tog 2>;
+            key-positions = <52 14>;
+        };
+
+        calc2 {
+            bindings = <&tog 5>;
+            key-positions = <33 32>;
+            layers = <0 1 14 15 16>;
         };
     };
 
@@ -423,7 +458,7 @@
             >;
         };
 
-        raise_layer {
+        clip_studio {
             // ------------------------------------------------------------------------------------------------------------
             // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
             // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
@@ -431,7 +466,7 @@
             // |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |  n/a   |  |  n/a  |  +   |   -   |   =   |  [   |   ]   |   \   |
             //                     |      |      |      |  n/a   |  |  n/a  |      |       |       |
 
-            display-name = "Raise";
+            display-name = "clip";
             bindings = <
 &trans     &trans           &trans          &kp UP_ARROW    &kp LBKT         &kp RBKT                           &trans       &trans     &trans     &trans    &trans     &trans
 &trans     &kp PRINTSCREEN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp C                              &kp N6       &kp N7     &kp N8     &kp N9    &kp N0     &trans
@@ -576,6 +611,42 @@
             >;
 
             label = "4";
+        };
+
+        ctrl {
+            bindings = <
+&trans          &kp LC(D)    &kp LC(T)     &kp LC(B)           &kp LC(I)            &kp LC(U)                    &trans  &trans  &trans  &trans  &trans  &trans
+&kp LC(TAB)     &kp LC(END)  &kp LC(HOME)  &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &kp LC(P)                    &trans  &trans  &trans  &trans  &trans  &trans
+&kp LC(ESCAPE)  &kp LC(S)    &kp LC(A)     &kp DEL             &kp LC(F)            &kp LC(H)                    &trans  &trans  &trans  &trans  &trans  &trans
+&kp LC(O)       &kp LC(N)    &kp LC(Y)     &kp LC(X)           &kp LC(C)            &kp LC(V)  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                           &kp LC(Z)           &kp LC(LEFT_ALT)     &sk LSHFT  &trans    &trans  &trans  &trans  &trans
+            >;
+
+            label = "ctrl";
+        };
+
+        window {
+            bindings = <
+&kp LG(F4)  &trans               &trans              &kp LG(UP_ARROW)    &trans               &trans                       &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &kp LG(TAB)          &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(RIGHT_ARROW)  &kp LG(R)                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &kp LG(PRINTSCREEN)  &kp LG(D)           &kp LG(E)           &kp LG(I)            &kp LG(L)                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans               &kp LG(PERIOD)      &kp LG(P)           &kp LG(S)            &kp LG(V)  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                                     &sk LEFT_ALT        &sk LCTRL            &sk LSHFT  &trans    &trans  &trans  &trans  &trans
+            >;
+
+            label = "win";
+        };
+
+        extra {
+            bindings = <
+&trans      &trans         &trans         &trans  &trans       &trans                     &trans  &trans  &trans  &trans  &trans  &trans
+&kp LA(F4)  &kp F3         &kp F4         &kp F5  &kp F6       &kp F10                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &kp LA(SPACE)  &kp LA(ENTER)  &kp F2  &kp LA(TAB)  &trans                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans         &trans         &trans  &trans       &trans   &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                          &trans  &trans       &trans   &trans    &trans  &trans  &trans  &trans
+            >;
+
+            label = "esc";
         };
     };
 
