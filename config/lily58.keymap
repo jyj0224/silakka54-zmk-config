@@ -545,8 +545,8 @@
             bindings = <
 &kp N0     &kp N1  &kp N2  &kp N3     &kp N4     &kp N5                       &trans  &trans  &trans  &trans  &trans  &trans
 &kp TAB    &kp Q   &kp W   &kp E      &kp F      &kp M                        &trans  &trans  &trans  &trans  &trans  &trans
-&kp LANG1  &kp A   &kp S   &kp D      &kp LC(F)  &kp Y                        &trans  &trans  &trans  &trans  &trans  &trans
-&kp C      &trans  &trans  &trans     &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp LANG1  &kp A   &kp S   &kp D      &kp LC(F)  &kp R                        &trans  &trans  &trans  &trans  &trans  &trans
+&kp C      &trans  &trans  &trans     &trans     &kp Y      &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                            &kp LCTRL  &td_csh    &kp SPACE  &trans    &trans  &trans  &trans  &trans
             >;
 
