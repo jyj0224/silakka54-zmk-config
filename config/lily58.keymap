@@ -481,7 +481,7 @@
 &trans  &trans  &trans          &trans          &trans           &trans                       &trans     &trans     &trans        &trans  &trans  &trans
 &trans  &trans  &trans          &kp UP_ARROW    &td_lang         &trans                       &trans     &trans     &trans        &trans  &trans  &trans
 &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans                       &trans     &kp Z      &kp UP_ARROW  &kp C   &trans  &trans
-&trans  &trans  &trans          &trans          &trans           &trans     &trans    &trans  &trans     &trans     &trans        &trans  &trans  &trans
+&trans  &trans  &trans          &trans          &kp P            &kp N      &trans    &trans  &kp P      &kp N      &trans        &trans  &trans  &trans
                                 &trans          &kp ENTER        &kp SPACE  &trans    &trans  &kp SPACE  &kp SPACE  &trans
             >;
 
