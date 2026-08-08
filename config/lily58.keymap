@@ -543,11 +543,11 @@
 
         dst {
             bindings = <
-&kp N0     &kp N1  &kp N2  &kp N3     &kp N4     &kp N5                       &trans  &trans  &trans  &trans  &trans  &trans
-&kp TAB    &kp Q   &kp W   &kp E      &kp R      &kp M                        &trans  &trans  &trans  &trans  &trans  &trans
-&kp LANG1  &kp A   &kp S   &kp D      &kp F      &trans                       &trans  &trans  &trans  &trans  &trans  &trans
-&kp C      &trans  &trans  &trans     &trans     &kp Y      &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                           &kp LCTRL  &kp LC(F)  &kp SPACE  &trans    &trans  &trans  &trans  &trans
+&kp N0     &kp N1         &kp N2  &kp N3     &kp N4     &kp N5                           &trans  &trans  &trans  &trans  &trans  &trans
+&kp TAB    &kp Q          &kp W   &kp E      &kp R      &kp M                            &trans  &trans  &trans  &trans  &trans  &trans
+&kp LANG1  &kp A          &kp S   &kp D      &kp F      &kp LS(LCTRL)                    &trans  &trans  &trans  &trans  &trans  &trans
+&kp C      &kp LS(LCTRL)  &trans  &trans     &trans     &kp Y          &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                  &kp LCTRL  &kp LC(F)  &kp SPACE      &trans    &trans  &trans  &trans  &trans
             >;
 
             label = "DST";
