@@ -36,7 +36,7 @@
         };
 
         lower {
-            bindings = <&to 5>;
+            bindings = <&to 4>;
             key-positions = <52 57>;
         };
 
@@ -118,7 +118,7 @@
         arrow {
             bindings = <&tog 3>;
             key-positions = <28 26 27>;
-            layers = <0 1 3 6 7 5>;
+            layers = <0 1 3 7 7 5>;
         };
 
         ctrl_del {
@@ -535,7 +535,7 @@
 &kp LC(HOME)  &kp LC(LS(P))        &kp LC(LS(F6))         &kp LC(LS(AMPERSAND))  &kp F          &kp LC(LS(UNDERSCORE))                    &kp F7            &kp F8            &kp F9             &kp F10        &kp F11   &kp F12
 &kp LC(END)   &kp A                &kp S                  &kp D                  &kp V          &kp Z                                     &trans            &kp LC(LS(UP))    &kp PAGE_UP        &kp PAGE_DOWN  &kp SEMI  &kp TAB
 &kp LC(TAB)   &kp B                &kp I                  &kp U                  &kp X          &kp Y                   &trans    &trans  &kp LC(LS(LEFT))  &kp LC(LS(DOWN))  &kp LC(LS(RIGHT))  &kp SPACE      &kp HOME  &kp DELETE
-                                                          &kp LC(SPACE)          &kt LSHFT      &to 6                   &trans    &trans  &kt RSHFT         &kt RIGHT_ALT     &kp ENTER
+                                                          &kp LC(SPACE)          &kt LSHFT      &to 7                   &trans    &trans  &kt RSHFT         &kt RIGHT_ALT     &kp ENTER
             >;
 
             label = "excel_2";
