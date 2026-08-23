@@ -221,7 +221,7 @@
 
         clipstdio {
             bindings = <&tog 2>;
-            key-positions = <52 14>;
+            key-positions = <52 50>;
         };
 
         calc2 {
