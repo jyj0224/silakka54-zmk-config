@@ -27,7 +27,7 @@
 
         function {
             bindings = <&tog 3>;
-            key-positions = <52 55>;
+            key-positions = <55 20>;
         };
 
         calc {
@@ -54,19 +54,13 @@
 
         gui {
             bindings = <&kp LEFT_GUI>;
-            key-positions = <11 10>;
+            key-positions = <36 37>;
             layers = <2 1>;
         };
 
         delete {
             bindings = <&kp DELETE>;
             key-positions = <0 1>;
-            layers = <2 1>;
-        };
-
-        exclaim {
-            bindings = <&kp RS(NUMBER_1)>;
-            key-positions = <49 48>;
             layers = <2 1>;
         };
 
@@ -161,7 +155,7 @@
 
         base {
             bindings = <&to 0>;
-            key-positions = <52 15>;
+            key-positions = <52 55>;
         };
 
         clipboard {
@@ -331,7 +325,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_EQUAL";
             #binding-cells = <0>;
-            bindings = <&hold_tap LS(MINUS) MINUS>, <&kp EQUAL>;
+            bindings = <&hold_tap LS(MINUS) MINUS>, <&hold_tap LS(EQUAL) EQUAL>;
         };
     };
 
@@ -438,20 +432,20 @@
             display-name = "Eng";
             bindings = <
 &hold_tap CAPSLOCK TILDE  &hold_tap LS(N1) NUMBER_1  &hold_tap LS(N2) NUMBER_2  &hold_tap LS(N3) NUMBER_3  &hold_tap LS(N4) NUMBER_4  &hold_tap LS(N5) N5                  &hold_tap LS(N6) NUMBER_6  &hold_tap LS(N7) N7  &hold_tap LS(N8) N8  &hold_tap LS(N9) N9        &hold_tap LS(N0) N0          &kp PRINTSCREEN
-&kp TAB                   &hold_tap LS(Q) Q          &hold_tap LS(W) W          &hold_tap LS(E) E          &hold_tap LS(R) R          &td_y                                &hold_tap RS(Y) Y          &hold_tap RS(U) U    &hold_tap RS(I) I    &hold_tap RS(O) O          &hold_tap RS(P) P            &td_equal
+&kp TAB                   &hold_tap LS(Q) Q          &hold_tap LS(W) W          &hold_tap LS(E) E          &hold_tap LS(R) R          &td_y                                &kp LANG1                  &hold_tap RS(U) U    &hold_tap RS(I) I    &hold_tap RS(O) O          &hold_tap RS(P) P            &td_equal
 &kp LCTRL                 &hold_tap LS(A) A          &hold_tap LS(S) S          &hold_tap LS(D) D          &hold_tap LS(F) F          &hold_tap LS(G) G                    &hold_tap RS(H) H          &hold_tap RS(J) J    &hold_tap RS(K) K    &hold_tap RS(L) L          &hold_tap LS(APOS) APOS      &hold_tap LS(SEMI) SEMI
 &kp LSHIFT                &kp LEFT_ALT               &hold_tap LS(Z) Z          &hold_tap LS(X) X          &hold_tap LS(C) C          &hold_tap LS(V) V    &none    &none  &hold_tap PERIOD COMMA     &hold_tap RS(N) N    &hold_tap RS(M) M    &hold_tap RS(COMMA) COMMA  &hold_tap RS(PERIOD) PERIOD  &td_excl
                                                                                 &kp DEL                    &kp ENTER                  &hold_tap LS(B) B    &none    &none  &td_backspace              &kp SPACE            &kp ENTER
             >;
         };
 
-        layer_17 {
+        function {
             bindings = <
-&kp ESC    &kp F1     &kp F2     &kp F3      &kp F4     &kp F5                       &kp F6     &kp F7     &kp F8     &kp F9     &kp F10  &kp PRINTSCREEN
-&kp TAB    &kp END    &kp HOME   &kp LG(E)   &kp LG(R)  &kp LC(T)                    &kp LC(U)  &kp LG(I)  &kp RC(O)  &kp LC(P)  &kp F11  &kp F12
-&kp LSHFT  &kp LC(A)  &kp LC(S)  &kp LG(D)   &kp LC(F)  &kp G                        &kp LC(H)  &kp J      &kp K      &kp L      &trans   &trans
-&kp LGUI   &kp LALT   &kp LC(Z)  &kp LC(X)   &kp LC(C)  &kp LC(V)  &trans    &trans  &kp LC(N)  &kp M      &trans     &trans     &trans   &trans
-                                 &kp DELETE  &kp ENTER  &kp LC(B)  &trans    &trans  &kp BSPC   &kp SPACE  &kp ENTER
+&kp ESC    &kp F1     &kp F2     &kp F3      &kp F4     &kp F5                       &kp F6     &kp F7          &kp F8     &kp F9     &kp F10                            &kp F11
+&kp TAB    &kp END    &kp HOME   &kp LG(E)   &kp LG(R)  &kp LC(T)                    &kp LC(Y)  &kp LC(U)       &kp LG(I)  &kp LC(O)  &kp LC(P)                          &hold_tap SLASH ASTERISK
+&kp LSHFT  &kp LC(A)  &kp LC(S)  &kp LG(D)   &kp LC(F)  &kp G                        &kp LC(H)  &kp INSERT      &kp DEL    &kp CAPS   &hold_tap LEFT_BRACE LEFT_BRACKET  &hold_tap RIGHT_BRACE RIGHT_BRACKET
+&kp LGUI   &kp LALT   &kp LC(Z)  &kp LC(X)   &kp LC(C)  &kp LC(V)  &trans    &trans  &kp LC(N)  &kp LANG_HANJA  &trans     &trans     &trans                             &trans
+                                 &kp DELETE  &kp ENTER  &kp LC(B)  &trans    &trans  &kp BSPC   &kp SPACE       &kp ENTER
             >;
 
             label = "function";
