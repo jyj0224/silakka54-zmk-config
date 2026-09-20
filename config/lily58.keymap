@@ -401,7 +401,7 @@
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3     &bt BT_SEL 4                         &out OUT_USB  &out OUT_BLE  &trans        &trans  &trans  &bt BT_CLR_ALL
 &tog 4      &tog 1        &tog 2          &kp UP_ARROW    &td_lang         &kp C_VOLUME_UP                      &trans        &trans        &trans        &trans  &trans  &trans
 &tog 5      &tog 6        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp C_VOLUME_DOWN                    &trans        &kp Z         &kp UP_ARROW  &kp C   &trans  &trans
-&tog 8      &trans        &trans          &trans          &kp P            &kp N              &trans    &trans  &kp P         &kp N         &trans        &trans  &trans  &trans
+&tog 8      &kp X         &kp Z           &kp C           &kp P            &kp N              &trans    &trans  &kp P         &kp N         &trans        &trans  &trans  &trans
                                           &kp ESC         &kp LA(ENTER)    &kp SPACE          &trans    &trans  &kp SPACE     &kp SPACE     &trans
             >;
 
