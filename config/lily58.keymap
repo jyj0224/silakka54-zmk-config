@@ -405,7 +405,7 @@
                                           &kp ESC         &kp LA(ENTER)    &kp SPACE          &trans    &trans  &kp SPACE     &kp SPACE     &trans
             >;
 
-            label = "☆";
+            label = "□■";
         };
 
         KOR {
