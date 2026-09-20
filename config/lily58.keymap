@@ -442,7 +442,7 @@
             bindings = <
 &kp ESC    &kp F1     &kp F2     &kp F3      &kp F4     &kp F5                       &kp F6     &kp F7          &kp F8     &kp F9     &kp F10                            &kp F11
 &kp TAB    &kp END    &kp HOME   &kp LG(E)   &kp LG(R)  &kp LC(T)                    &kp LC(Y)  &kp LC(U)       &kp LG(I)  &kp LC(O)  &kp LC(P)                          &hold_tap SLASH ASTERISK
-&kp LSHFT  &kp LC(A)  &kp LC(S)  &kp LG(D)   &kp LC(F)  &kp G                        &kp LC(H)  &kp INSERT      &kp DEL    &kp CAPS   &hold_tap LEFT_BRACE LEFT_BRACKET  &hold_tap RIGHT_BRACE RIGHT_BRACKET
+&kp LSHFT  &kp LC(A)  &kp LC(S)  &kp LG(D)   &kp LC(F)  &kp F12                      &kp LC(H)  &kp INSERT      &kp DEL    &kp CAPS   &hold_tap LEFT_BRACE LEFT_BRACKET  &hold_tap RIGHT_BRACE RIGHT_BRACKET
 &kp LGUI   &kp LALT   &kp LC(Z)  &kp LC(X)   &kp LC(C)  &kp LC(V)  &trans    &trans  &kp LC(N)  &kp LANG_HANJA  &trans     &trans     &trans                             &kp LCTRL
                                  &kp DELETE  &kp ENTER  &kp LC(B)  &trans    &trans  &kp BSPC   &kp SPACE       &kp ENTER
             >;
