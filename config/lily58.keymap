@@ -190,6 +190,11 @@
             bindings = <&tog 5>;
             key-positions = <33 32>;
         };
+
+        base2 {
+            bindings = <&tog 0>;
+            key-positions = <52 15>;
+        };
     };
 
     behaviors {
