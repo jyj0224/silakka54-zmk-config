@@ -26,19 +26,13 @@
         };
 
         function {
-            bindings = <&tog 3>;
+            bindings = <&sl 3>;
             key-positions = <55 20>;
         };
 
         calc {
             bindings = <&tog 5>;
-            key-positions = <52 16>;
-        };
-
-        esc {
-            bindings = <&kp ESC>;
-            key-positions = <12 13>;
-            layers = <2 1>;
+            key-positions = <26 28>;
         };
 
         excel {
@@ -49,18 +43,6 @@
         lang {
             bindings = <&kor_layer>;
             key-positions = <28 27>;
-            layers = <2 1>;
-        };
-
-        gui {
-            bindings = <&kp LEFT_GUI>;
-            key-positions = <36 37>;
-            layers = <2 1>;
-        };
-
-        delete {
-            bindings = <&kp DELETE>;
-            key-positions = <0 1>;
             layers = <2 1>;
         };
 
@@ -193,7 +175,47 @@
 
         base2 {
             bindings = <&to 0>;
+            key-positions = <15 16>;
+        };
+
+        up {
+            bindings = <&kp UP_ARROW>;
             key-positions = <52 15>;
+        };
+
+        down {
+            bindings = <&kp DOWN_ARROW>;
+            key-positions = <52 27>;
+        };
+
+        right {
+            bindings = <&kp RIGHT_ARROW>;
+            key-positions = <52 28>;
+        };
+
+        left {
+            bindings = <&kp LEFT_ARROW>;
+            key-positions = <52 26>;
+        };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <15 51>;
+        };
+
+        esc {
+            bindings = <&kp ESC>;
+            key-positions = <27 51>;
+        };
+
+        lang1 {
+            bindings = <&kp LANG1>;
+            key-positions = <28 51>;
+        };
+
+        caps {
+            bindings = <&kp CAPS>;
+            key-positions = <26 51>;
         };
     };
 
@@ -302,6 +324,8 @@
             label = "TD_Y";
             #binding-cells = <0>;
             bindings = <&hold_tap LS(T) T>, <&hold_tap RS(Y) Y>;
+
+            tapping-term-ms = <250>;
         };
 
         td_excl: td_excl {
@@ -417,8 +441,8 @@
             display-name = "Kor";
             bindings = <
 &kp TILDE       &hold_tap LS(N1) NUMBER_1  &hold_tap LS(N2) NUMBER_2  &hold_tap LS(N3) NUMBER_3  &hold_tap LS(N4) NUMBER_4  &hold_tap LS(N5) N5                  &hold_tap LS(N6) NUMBER_6  &hold_tap LS(N7) N7  &hold_tap LS(N8) N8  &hold_tap LS(N9) N9        &hold_tap LS(N0) N0          &kp PRINTSCREEN
-&kp TAB         &hold_tap LS(Q) Q          &hold_tap LS(W) W          &hold_tap LS(E) E          &hold_tap LS(R) R          &hold_tap LS(T) T                    &kp Y                      &kp U                &kp I                &hold_tap LS(O) O          &hold_tap LS(P) P            &td_equal
-&kp LEFT_SHIFT  &kp A                      &kp S                      &kp D                      &kp F                      &kp G                                &kp H                      &kp J                &kp K                &kp L                      &hold_tap LS(APOS) APOS      &hold_tap LS(SEMICOLON) SEMICOLON
+&kp LEFT_SHIFT  &hold_tap LS(Q) Q          &hold_tap LS(W) W          &hold_tap LS(E) E          &hold_tap LS(R) R          &hold_tap LS(T) T                    &kp Y                      &kp U                &kp I                &hold_tap LS(O) O          &hold_tap LS(P) P            &td_equal
+&kp LCTRL       &kp A                      &kp S                      &kp D                      &kp F                      &kp G                                &kp H                      &kp J                &kp K                &kp L                      &hold_tap LS(APOS) APOS      &hold_tap LS(SEMICOLON) SEMICOLON
 &kp LEFT_GUI    &kp LEFT_ALT               &kp Z                      &kp X                      &kp C                      &kp V                &none    &none  &kp B                      &kp N                &kp M                &hold_tap RS(COMMA) COMMA  &hold_tap RS(PERIOD) PERIOD  &td_excl
                                                                       &kp DEL                    &kp ENTER                  &kp LCTRL            &none    &none  &td_backspace              &kp SPACE            &kp ENTER
             >;
@@ -435,21 +459,21 @@
 
             display-name = "Eng";
             bindings = <
-&hold_tap CAPSLOCK TILDE  &hold_tap LS(N1) NUMBER_1  &hold_tap LS(N2) NUMBER_2  &hold_tap LS(N3) NUMBER_3  &hold_tap LS(N4) NUMBER_4  &hold_tap LS(N5) N5                  &hold_tap LS(N6) NUMBER_6  &hold_tap LS(N7) N7  &hold_tap LS(N8) N8  &hold_tap LS(N9) N9        &hold_tap LS(N0) N0          &kp PRINTSCREEN
-&kp TAB                   &hold_tap LS(Q) Q          &hold_tap LS(W) W          &hold_tap LS(E) E          &hold_tap LS(R) R          &td_y                                &kp LANG1                  &hold_tap RS(U) U    &hold_tap RS(I) I    &hold_tap RS(O) O          &hold_tap RS(P) P            &td_equal
-&kp LCTRL                 &hold_tap LS(A) A          &hold_tap LS(S) S          &hold_tap LS(D) D          &hold_tap LS(F) F          &hold_tap LS(G) G                    &hold_tap RS(H) H          &hold_tap RS(J) J    &hold_tap RS(K) K    &hold_tap RS(L) L          &hold_tap LS(APOS) APOS      &hold_tap LS(SEMI) SEMI
-&kp LGUI                  &kp LEFT_ALT               &hold_tap LS(Z) Z          &hold_tap LS(X) X          &hold_tap LS(C) C          &hold_tap LS(V) V    &none    &none  &hold_tap PERIOD COMMA     &hold_tap RS(N) N    &hold_tap RS(M) M    &hold_tap RS(COMMA) COMMA  &hold_tap RS(PERIOD) PERIOD  &td_excl
-                                                                                &kp DEL                    &kp ENTER                  &hold_tap LS(B) B    &none    &none  &td_backspace              &kp SPACE            &kp ENTER
+&kp TILDE       &hold_tap LS(N1) NUMBER_1  &hold_tap LS(N2) NUMBER_2  &hold_tap LS(N3) NUMBER_3  &hold_tap LS(N4) NUMBER_4  &hold_tap LS(N5) N5                  &hold_tap LS(N6) NUMBER_6  &hold_tap LS(N7) N7  &hold_tap LS(N8) N8  &hold_tap LS(N9) N9        &hold_tap LS(N0) N0          &kp PRINTSCREEN
+&kp LEFT_SHIFT  &hold_tap LS(Q) Q          &hold_tap LS(W) W          &hold_tap LS(E) E          &hold_tap LS(R) R          &td_y                                &hold_tap LS(Y) Y          &hold_tap RS(U) U    &hold_tap RS(I) I    &hold_tap RS(O) O          &hold_tap RS(P) P            &td_equal
+&kp LCTRL       &hold_tap LS(A) A          &hold_tap LS(S) S          &hold_tap LS(D) D          &hold_tap LS(F) F          &hold_tap LS(G) G                    &hold_tap RS(H) H          &hold_tap RS(J) J    &hold_tap RS(K) K    &hold_tap RS(L) L          &hold_tap LS(APOS) APOS      &hold_tap LS(SEMI) SEMI
+&kp LGUI        &kp LEFT_ALT               &hold_tap LS(Z) Z          &hold_tap LS(X) X          &hold_tap LS(C) C          &hold_tap LS(V) V    &none    &none  &hold_tap PERIOD COMMA     &hold_tap RS(N) N    &hold_tap RS(M) M    &hold_tap RS(COMMA) COMMA  &hold_tap RS(PERIOD) PERIOD  &td_excl
+                                                                      &kp DEL                    &kp ENTER                  &hold_tap LS(B) B    &none    &none  &td_backspace              &kp SPACE            &kp ENTER
             >;
         };
 
         function {
             bindings = <
-&kp ESC    &kp F1     &kp F2     &kp F3      &kp F4     &kp F5                       &kp F6     &kp F7          &kp F8     &kp F9     &kp F10                            &kp F11
-&kp TAB    &kp END    &kp HOME   &kp LG(E)   &kp LG(R)  &kp LC(T)                    &kp LC(Y)  &kp LC(U)       &kp LG(I)  &kp LC(O)  &kp LC(P)                          &hold_tap SLASH ASTERISK
-&kp LSHFT  &kp LC(A)  &kp LC(S)  &kp LG(D)   &kp LC(F)  &kp F12                      &kp LC(H)  &kp INSERT      &kp DEL    &kp CAPS   &hold_tap LEFT_BRACE LEFT_BRACKET  &hold_tap RIGHT_BRACE RIGHT_BRACKET
-&kp LGUI   &kp LALT   &kp LC(Z)  &kp LC(X)   &kp LC(C)  &kp LC(V)  &trans    &trans  &kp LC(N)  &kp LANG_HANJA  &trans     &trans     &trans                             &kp LCTRL
-                                 &kp DELETE  &kp ENTER  &kp LC(B)  &trans    &trans  &kp BSPC   &kp SPACE       &kp ENTER
+&kp ESC         &kp F1     &kp F2     &kp F3      &kp F4     &kp F5                       &kp F6     &kp F7          &kp F8     &kp F9     &kp F10                            &kp F11
+&kp LEFT_SHIFT  &kp END    &kp HOME   &kp LG(E)   &kp LG(R)  &kp LC(T)                    &kp LC(Y)  &kp LC(U)       &kp LG(I)  &kp LC(O)  &kp LC(P)                          &hold_tap SLASH ASTERISK
+&kp LCTRL       &kp LC(A)  &kp LC(S)  &kp LG(D)   &kp LC(F)  &kp F12                      &kp LC(H)  &kp INSERT      &kp DEL    &kp CAPS   &hold_tap LEFT_BRACE LEFT_BRACKET  &hold_tap RIGHT_BRACE RIGHT_BRACKET
+&kp LGUI        &kp LALT   &kp LC(Z)  &kp LC(X)   &kp LC(C)  &kp LC(V)  &trans    &trans  &kp LC(N)  &kp LANG_HANJA  &trans     &trans     &trans                             &kp LCTRL
+                                      &kp DELETE  &kp ENTER  &kp LC(B)  &trans    &trans  &kp BSPC   &kp SPACE       &kp ENTER
             >;
 
             label = "Fn";
