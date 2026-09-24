@@ -494,7 +494,7 @@
 &kp LC(HOME)  &kp LC(P)   &kp LC(PLUS)  &kp LC(MINUS)  &kp LC(F)   &kp LC(H)                     &kp F6     &kp F          &kp LC(PLUS)  &kp LC(MINUS)  &kp P     &kp F12
 &kp LC(END)   &kp LC(A)   &kp LC(S)     &kp LC(D)      &kp LC(V)   &kp LC(Z)                     &kp GRAVE  &kp UP         &kp PAGE_UP   &kp PAGE_DOWN  &kp SEMI  &kp TAB
 &kp LC(TAB)   &kp LC(B)   &kp LC(I)     &kp LC(U)      &kp LC(X)   &kp LC(Y)   &trans    &trans  &kp LEFT   &kp DOWN       &kp RIGHT     &kp SPACE      &kp HOME  &kp DELETE
-                                        &kp LC(SPACE)  &to 0       &tog 7      &trans    &trans  &kt LCTRL  &kt RIGHT_ALT  &kp ENTER
+                                        &kp LC(SPACE)  &mo 0       &tog 7      &trans    &trans  &kt LCTRL  &kt RIGHT_ALT  &kp ENTER
             >;
 
             label = "excel";
