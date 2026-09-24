@@ -405,7 +405,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        arrow {
+        base {
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3     &bt BT_SEL 4                         &out OUT_USB  &out OUT_BLE  &trans        &trans  &trans  &bt BT_CLR_ALL
 &to 4       &to 1         &to 2           &kp UP_ARROW    &td_lang         &kp C_VOLUME_UP                      &trans        &trans        &trans        &trans  &trans  &trans
@@ -424,7 +424,7 @@
 &kp LEFT_SHIFT  &hold_tap LS(Q) Q          &hold_tap LS(W) W          &hold_tap LS(E) E          &hold_tap LS(R) R          &hold_tap LS(T) T                    &kp Y                      &kp U                &kp I                &hold_tap LS(O) O          &hold_tap LS(P) P            &td_equal
 &kp LCTRL       &kp A                      &kp S                      &kp D                      &kp F                      &kp G                                &kp H                      &kp J                &kp K                &kp L                      &hold_tap LS(APOS) APOS      &hold_tap LS(SEMICOLON) SEMICOLON
 &kp LEFT_GUI    &kp LEFT_ALT               &kp Z                      &kp X                      &kp C                      &kp V                &none    &none  &kp B                      &kp N                &kp M                &hold_tap RS(COMMA) COMMA  &hold_tap RS(PERIOD) PERIOD  &td_excl
-                                                                      &kp DEL                    &mo 0                      &kp LCTRL            &none    &none  &td_backspace              &kp SPACE            &kp ENTER
+                                                                      &kp DEL                    &mo 17                     &kp LCTRL            &none    &none  &td_backspace              &kp SPACE            &kp ENTER
             >;
         };
 
@@ -443,7 +443,7 @@
 &kp LEFT_SHIFT  &hold_tap LS(Q) Q          &hold_tap LS(W) W          &hold_tap LS(E) E          &hold_tap LS(R) R          &td_y                                &hold_tap LS(Y) Y          &hold_tap RS(U) U    &hold_tap RS(I) I    &hold_tap RS(O) O          &hold_tap RS(P) P            &td_equal
 &kp LCTRL       &hold_tap LS(A) A          &hold_tap LS(S) S          &hold_tap LS(D) D          &hold_tap LS(F) F          &hold_tap LS(G) G                    &hold_tap RS(H) H          &hold_tap RS(J) J    &hold_tap RS(K) K    &hold_tap RS(L) L          &hold_tap LS(APOS) APOS      &hold_tap LS(SEMI) SEMI
 &kp LGUI        &kp LEFT_ALT               &hold_tap LS(Z) Z          &hold_tap LS(X) X          &hold_tap LS(C) C          &hold_tap LS(V) V    &none    &none  &hold_tap PERIOD COMMA     &hold_tap RS(N) N    &hold_tap RS(M) M    &hold_tap RS(COMMA) COMMA  &hold_tap RS(PERIOD) PERIOD  &td_excl
-                                                                      &kp DEL                    &mo 0                      &hold_tap LS(B) B    &none    &none  &td_backspace              &kp SPACE            &kp ENTER
+                                                                      &kp DEL                    &mo 17                     &hold_tap LS(B) B    &none    &none  &td_backspace              &kp SPACE            &kp ENTER
             >;
         };
 
@@ -618,6 +618,18 @@
             >;
 
             label = "esc";
+        };
+
+        arrow {
+            bindings = <
+&trans  &trans  &trans          &trans          &trans           &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp ESCAPE      &kp UP_ARROW    &kp F2           &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans          &trans          &trans           &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans          &trans           &trans  &trans    &trans  &trans  &trans  &trans
+            >;
+
+            label = "arrow";
         };
     };
 
