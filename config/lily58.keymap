@@ -178,44 +178,24 @@
             key-positions = <15 16>;
         };
 
-        up {
-            bindings = <&kp UP_ARROW>;
-            key-positions = <52 15>;
-        };
-
-        down {
-            bindings = <&kp DOWN_ARROW>;
-            key-positions = <52 27>;
-        };
-
-        right {
-            bindings = <&kp RIGHT_ARROW>;
-            key-positions = <52 28>;
-        };
-
-        left {
-            bindings = <&kp LEFT_ARROW>;
-            key-positions = <52 26>;
-        };
-
         tab {
             bindings = <&kp TAB>;
-            key-positions = <15 51>;
+            key-positions = <15 52>;
         };
 
         esc {
             bindings = <&kp ESC>;
-            key-positions = <27 51>;
+            key-positions = <27 52>;
         };
 
         lang1 {
             bindings = <&kp LANG1>;
-            key-positions = <28 51>;
+            key-positions = <28 52>;
         };
 
         caps {
             bindings = <&kp CAPS>;
-            key-positions = <26 51>;
+            key-positions = <26 52>;
         };
     };
 
@@ -444,7 +424,7 @@
 &kp LEFT_SHIFT  &hold_tap LS(Q) Q          &hold_tap LS(W) W          &hold_tap LS(E) E          &hold_tap LS(R) R          &hold_tap LS(T) T                    &kp Y                      &kp U                &kp I                &hold_tap LS(O) O          &hold_tap LS(P) P            &td_equal
 &kp LCTRL       &kp A                      &kp S                      &kp D                      &kp F                      &kp G                                &kp H                      &kp J                &kp K                &kp L                      &hold_tap LS(APOS) APOS      &hold_tap LS(SEMICOLON) SEMICOLON
 &kp LEFT_GUI    &kp LEFT_ALT               &kp Z                      &kp X                      &kp C                      &kp V                &none    &none  &kp B                      &kp N                &kp M                &hold_tap RS(COMMA) COMMA  &hold_tap RS(PERIOD) PERIOD  &td_excl
-                                                                      &kp DEL                    &kp ENTER                  &kp LCTRL            &none    &none  &td_backspace              &kp SPACE            &kp ENTER
+                                                                      &kp DEL                    &mo 0                      &kp LCTRL            &none    &none  &td_backspace              &kp SPACE            &kp ENTER
             >;
         };
 
@@ -463,7 +443,7 @@
 &kp LEFT_SHIFT  &hold_tap LS(Q) Q          &hold_tap LS(W) W          &hold_tap LS(E) E          &hold_tap LS(R) R          &td_y                                &hold_tap LS(Y) Y          &hold_tap RS(U) U    &hold_tap RS(I) I    &hold_tap RS(O) O          &hold_tap RS(P) P            &td_equal
 &kp LCTRL       &hold_tap LS(A) A          &hold_tap LS(S) S          &hold_tap LS(D) D          &hold_tap LS(F) F          &hold_tap LS(G) G                    &hold_tap RS(H) H          &hold_tap RS(J) J    &hold_tap RS(K) K    &hold_tap RS(L) L          &hold_tap LS(APOS) APOS      &hold_tap LS(SEMI) SEMI
 &kp LGUI        &kp LEFT_ALT               &hold_tap LS(Z) Z          &hold_tap LS(X) X          &hold_tap LS(C) C          &hold_tap LS(V) V    &none    &none  &hold_tap PERIOD COMMA     &hold_tap RS(N) N    &hold_tap RS(M) M    &hold_tap RS(COMMA) COMMA  &hold_tap RS(PERIOD) PERIOD  &td_excl
-                                                                      &kp DEL                    &kp ENTER                  &hold_tap LS(B) B    &none    &none  &td_backspace              &kp SPACE            &kp ENTER
+                                                                      &kp DEL                    &mo 0                      &hold_tap LS(B) B    &none    &none  &td_backspace              &kp SPACE            &kp ENTER
             >;
         };
 
